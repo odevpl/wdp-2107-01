@@ -1,13 +1,77 @@
+/* BASE COLOURS - DO NOT USE IN OTHER FILES */
+$light-gray: #434343;
+$ligh-gray2: rgb(169, 169, 169);
+$gray: #363636;
+$gray2: rgb(42, 42, 42);
+$gray3: #292929;
+$dark-gray: #2a2a2a;
+$orange: #d58e32;
+$white: #ffffff;
+$white2: #e1e1e1;
+$white3: #f4f5f7;
+$white4: #e2e2e2;
+$white5: #e1e1e1;
+$white6: rgb(216, 216, 216);
+$white7: rgb(224, 227, 237);
+$ivory: #b6b6b6;
+$black-transaprent: rgba(1, 2, 2, 0.2);
+
+/* COMPONENT COLOURS - for use in other files */
+
+$header-topbar-bg: $light-gray;
+$header-bg: $gray;
+
+$footer-claim-bg: $dark-gray;
+$footer-bg: $gray;
+
+$primary: $orange;
+
+$text-color: $dark-gray;
+
+$form-border-color: $gray3;
+
+$button-text: $white;
+$button-background: $dark-gray;
+$button-outline: $dark-gray;
+
+$feature-box-border: $ivory;
+$feature-box-background: $white;
+$feature-box-color: $gray2;
+$feature-box-color-active: $white;
+
+$product-box-color: $white;
+$product-box-border: $white2;
+$photo-color: $white3;
+
+$sale-color: $white;
+$sale-background: $gray3;
+$sale-stars: $gray2;
+
+$root-line: $dark-gray;
+
+$panelBar-border: $white4;
+
+$menu-link: $gray2;
+$menu-link-border: $white;
+$menu-link-active: $white;
+
+$dots-list: $white;
+$dots-list-link: $white5;
+
+$phone-number: $white6;
+
+$cartBox-color: $white;
+$cartBox-counter: $white7;
+
+$footer-wrapper-h6: $white;
+$footer-wrapper-li-a: $white;
+$footer-copyright-color: $ligh-gray2;
+$footer-socialMedia-color: $ligh-gray2;
+
+$box-shadow: $black-transaprent;
+
+$list-link: $white;
+
+
+/* Paddings */
 $base-padding: 24px;
-
-$header-topbar-bg: #434343;
-$header-bg: #363636;
-
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
-
-$primary: #d58e32;
-
-$text-color: #2a2a2a;
-
-$form-border-color: #292929;

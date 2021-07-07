@@ -12,7 +12,7 @@
       margin: 0;
       font-size: 17px;
       line-height: 42px;
-      color: rgb(216, 216, 216);
+      color: $phone-number;
       font-weight: 500;
 
       .icon {
@@ -29,7 +29,7 @@
     .cartBox {
       display: inline-block;
       position: relative;
-      color: #ffffff;
+      color: $cartBox-color;
 
       .cartIcon {
         background-color: $primary;
@@ -55,7 +55,7 @@
         align-items: center;
         justify-content: center;
         font-size: 14px;
-        color: rgb(224, 227, 237);
+        color: $cartBox-counter;
         position: absolute;
         top: 50%;
         right: 0;
