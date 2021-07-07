@@ -32,6 +32,8 @@
       padding: 5px 30px 5px 35px;
       position: relative;
       z-index: 1;
+      font-size: 14px;
+      outline: transparent;
     }
   }
 
@@ -58,3 +60,30 @@
     }
   }
 }
+
+.root:hover {
+  border: 1px solid $primary;
+
+  .category {
+    border-right: 1px solid $primary;
+  }
+
+  .category:hover {
+
+    .icon:last-child {
+      transform: scale(1.2);
+    }
+  }
+
+  .searchField:hover {
+
+    button {
+      transform: scale(1.2);
+    }
+  }
+}
+
+
+
+
+
