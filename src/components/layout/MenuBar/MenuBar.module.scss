@@ -1,7 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
+  box-shadow: 2px 3.464px 6px $box-shadow;
   background-color: #ffffff;
 
   :global(.container) > :global(.row) {
@@ -32,14 +32,14 @@
       text-decoration: none;
       display: flex;
       align-items: center;
-      border-top: 4px solid #ffffff;
+      border-top: 4px solid $menu-link-border;
       font-weight: 500;
       letter-spacing: 1px;
 
       &:hover,
       &.active {
         background-color: $primary;
-        color: #ffffff;
+        color: $menu-link-active;
         border-color: $primary;
       }
 
