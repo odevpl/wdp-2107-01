@@ -83,5 +83,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .active {
+      background-color: $header-bg;
+      color: $primary;
+      border: 1px solid $header-bg;
+      svg {
+        transform: scale(1.1);
+      }
+    }
   }
 }
