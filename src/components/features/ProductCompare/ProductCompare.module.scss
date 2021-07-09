@@ -1,0 +1,88 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
+  background-color: #ffffff;
+  bottom: 0;
+  max-height: 200px;
+  position: sticky;
+  z-index: 99;
+
+  :global(.container) > * {
+    border: 1px solid #e1e1e1;
+    height: 200px;
+  }
+
+  .rowWrapper {
+    padding-top: 10px;
+  }
+  .colWrapper:hover {
+    opacity: 0.9;
+    .close {
+      opacity: 1;
+    }
+  }
+
+  .imageWrapper {
+    position: relative;
+    padding: 85% 10px 0 10px;
+    max-height: 200px;
+    background: {
+      color: #f4f5f7;
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+    overflow: hidden;
+    align-items: flex-end;
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .close {
+    position: absolute;
+    right: 22px;
+    top: 6px;
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .close:before,
+  .close:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 33px;
+    width: 4px;
+    background-color: $primary;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+
+  .btnWrapper {
+    padding-left: 42px;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn {
+    text-decoration: none;
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
