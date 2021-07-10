@@ -7,6 +7,7 @@ import {
   faStar,
   faExchangeAlt,
   faShoppingBasket,
+  faHeart as farHeart,
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
@@ -22,6 +23,7 @@ const ProductBox = ({
   id,
   addToCompare,
   countProductToCompare,
+  favourite,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -51,8 +53,10 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
-          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+        <Button className={favourite ? styles.active : undefined} variant='outline'>
+          <FontAwesomeIcon icon={favourite ? farHeart : faHeart}>
+            Favorite
+          </FontAwesomeIcon>
         </Button>
         <Button
           onClick={event => {
@@ -83,8 +87,9 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   image: PropTypes.string,
-  oldPrice: PropTypes.number,
+  favourite: PropTypes.bool,
   compare: PropTypes.bool,
+  oldPrice: PropTypes.number,
   id: PropTypes.string,
   addToCompare: PropTypes.func,
   countProductToCompare: PropTypes.func,
