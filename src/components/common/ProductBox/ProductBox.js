@@ -19,16 +19,13 @@ const ProductBox = ({
   stars,
   image,
   oldPrice,
-  compare,
-  id,
-  addToCompare,
-  countProductToCompare,
   favourite,
+  compare,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
-      {promo && <div className={styles.sale}>{promo}</div>}
-      <Link to={`/product/${id}`}>
+      <Link to={`/product/${name}`}>
+        {promo && <div className={styles.sale}>{promo}</div>}
         <img className={styles.image} src={image} alt={'coming soon'} />
       </Link>
       <div className={styles.buttons}>
@@ -54,7 +51,7 @@ const ProductBox = ({
         ))}
       </div>
     </div>
-    <div className={styles.line}></div>
+    <div className={styles.line} />
     <div className={styles.actions}>
       <div className={styles.outlines}>
         <Button className={favourite ? styles.active : undefined} variant='outline'>

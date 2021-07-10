@@ -2,4 +2,230 @@
 
 .root {
   padding: $base-padding 0;
+
+  .bigSquare {
+    width: 400px;
+    height: 400px;
+    background-color: $white3;
+
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+    height: 15%;
+
+    .smallSquare {
+      margin: 0 5px;
+      width: 80px;
+      height: 80px;
+      background-color: $white3;
+    }
+
+  }
+
+  .arrow {
+    margin: 0 auto;
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+    inline-size: 0.5;
+
+    &:hover {
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+
+  .title {
+    display: flex;
+    flex-direction: row;
+
+    h3 {
+      margin-right: 30%;
+    }
+  }
+
+  .checked {
+    color: $primary;
+  }
+
+  .empty {
+    color: $white3;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+
+  .reviews {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+    border-bottom: solid 1px $gray-4;
+
+    p {
+      margin: 0;
+      padding: 0 20px;
+      color: $ivory;
+    }
+
+    .addReview {
+      padding: 0 20px;
+      color: $ivory;
+      border-left: solid 1px $gray-4;
+      text-decoration: none;
+    }
+  }
+
+  .price {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    padding-bottom: 25px;
+    font-size: 25px;
+    border-bottom: solid 1px $gray-4;
+
+    .oldPrice {
+      text-decoration: line-through;
+      margin: 0;
+      padding: 3px 20px 3px 3px;
+      color: $ligh-gray2;
+    }
+
+    .promoPrice {
+      padding: 3px;
+      margin: 0;
+      background-color: $header-topbar-bg;
+      color: $white3;
+      font-weight: bolder;
+    }
+
+  }
+
+  .buttons {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px $gray-4;
+
+    .addToCart {
+      padding: 10px 5px;
+      margin: 5px;
+      background-color: $primary;
+      border-color: $primary;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        filter: brightness(0.95);
+      }
+
+    }
+
+    .state {
+      margin: 5px;
+
+      &:hover {
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+
+    .quantity{
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+
+      p {
+        font-size: 15px;
+        margin: 5px;
+        padding: 5px 30px 5px 0;
+      }
+
+      input {
+        margin: 5px;
+        font-size: 15px;
+        height: 33px;
+        width: 100px;
+      }
+    }
+  }
+
+  .description{
+    padding: 15px 0;
+    border-bottom: solid 1px $gray-4;
+
+    h4 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 15px;
+      color: $ivory;
+    }
+  }
+
+  .details {
+    padding: 15px 0;
+    border-bottom: solid 1px $gray-4;
+
+    p {
+      font-size: 15px;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    .one {
+      color: $ivory;
+    }
+  }
+
+  .social {
+    padding: 40px 0;
+
+    .link, .facebook {
+      margin: 10px 5px 10px 0;
+      border: solid 1px $ligh-gray2;
+      padding: 10px;
+      color: $ivory;
+      width: 16%;
+
+      .iconF, .iconG, .iconT, .iconP, .iconL {
+        margin-right: 5px;
+        font-size: 15px;
+
+      }
+
+      .iconG {
+        color: rgb(247, 41, 41);
+      }
+
+      .iconT {
+        color: rgb(60, 60, 255);
+      }
+
+      .iconP {
+        color: rgb(150, 8, 8);
+      }
+
+      .iconL {
+        color: rgb(65, 136, 230);
+      }
+    }
+
+    .facebook {
+      border-color: rgb(50, 80, 180);
+      background-color: rgb(50, 80, 180);
+      color: white;
+    }
+  }
 }
+
+
+
