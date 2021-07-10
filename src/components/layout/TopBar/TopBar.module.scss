@@ -1,5 +1,11 @@
 @import "../../../styles/settings.scss";
 
+@mixin small {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
 .root {
   background-color: $header-topbar-bg;
 
@@ -37,6 +43,51 @@
 
     .icon {
       margin-right: 5px;
+    }
+
+    @include small {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+
+    .topOptions {
+      display: flex;
+      flex: 8;
+
+      ul li {
+        margin-left: 12px;
+      }
+    }
+
+    .topMenu {
+      display: flex;
+      flex: 4;
+
+      ul li {
+        margin-left: 1.3rem;
+      }
+    }
+
+    .topOptions, .topMenu {
+      padding: 0;
+    }
+
+    .topOptions ul li {
+      margin-right: 0.1rem;
+
+      .icon {
+        margin-left: 0;
+      }
+    }
+
+    .topMenu ul li a a { 
+      display: none;     
     }
   }
 }

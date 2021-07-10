@@ -1,5 +1,17 @@
 @import "../../../styles/settings.scss";
 
+@mixin tablet {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
 .root {
   background-color: $header-bg;
 
@@ -15,12 +27,38 @@
       color: $phone-number;
       font-weight: 500;
 
+      @include small {
+        font-size: 14px;
+      }
+
       .icon {
         font-size: 32px;
         color: $primary;
         vertical-align: middle;
         margin-top: -3px;
         margin-right: 0.8rem;
+
+        @include small {
+          transform: scale(0.7);
+          margin-right: 0;
+        }
+      }
+    }
+
+    @include tablet {
+      margin-top: -7%;
+    }
+  }
+
+  .logo {
+    @include tablet {
+      margin-top: 3%;
+    }
+    @include small {
+      margin-top: 0;
+      img {
+        max-width: 90%;
+        max-height: 90%;
       }
     }
   }
@@ -30,6 +68,7 @@
       display: inline-block;
       position: relative;
       color: $cartBox-color;
+      padding-top: 1%;
 
       .cartIcon {
         background-color: $primary;
@@ -68,6 +107,16 @@
           background-color: lighten($primary, 10%);
         }
       }
+    }
+
+    @include tablet {
+      margin-top: -5%;
+      padding-right: 5%;
+    }
+    @include small {
+      margin-top: 0;
+      align-self: center;
+      padding-right: 11%;
     }
   }
 }
