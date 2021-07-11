@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -11,6 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 const ProductBox = ({
   name,
@@ -28,7 +28,9 @@ const ProductBox = ({
   <div className={styles.root}>
     <div className={styles.photo}>
       {promo && <div className={styles.sale}>{promo}</div>}
-      <img className={styles.image} src={image} alt={'coming soon'} />
+      <Link to={`/product/${id}`}>
+        <img className={styles.image} src={image} alt={'coming soon'} />
+      </Link>
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
         <Button variant='small'>
@@ -37,7 +39,9 @@ const ProductBox = ({
       </div>
     </div>
     <div className={styles.content}>
-      <h5>{name}</h5>
+      <Link to={`/product/${id}`}>
+        <h5>{name}</h5>
+      </Link>
       <div className={styles.stars}>
         {[1, 2, 3, 4, 5].map(i => (
           <a key={i} href='#'>
@@ -82,6 +86,7 @@ const ProductBox = ({
 
 ProductBox.propTypes = {
   children: PropTypes.node,
+  id: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.number,
   promo: PropTypes.string,
