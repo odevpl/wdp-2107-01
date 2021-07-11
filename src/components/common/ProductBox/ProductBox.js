@@ -13,15 +13,17 @@ import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 
 const ProductBox = ({
-  id,
   name,
   price,
   promo,
   stars,
   image,
   oldPrice,
-  favourite,
   compare,
+  id,
+  addToCompare,
+  countProductToCompare,
+  favourite,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -60,7 +62,15 @@ const ProductBox = ({
             Favorite
           </FontAwesomeIcon>
         </Button>
-        <Button className={compare ? styles.active : undefined} variant='outline'>
+        <Button
+          onClick={event => {
+            event.preventDefault();
+            if (countProductToCompare() < 4) {
+              addToCompare(id);
+            }
+          }}
+          variant={compare ? 'active' : 'outline'}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -85,6 +95,9 @@ ProductBox.propTypes = {
   favourite: PropTypes.bool,
   compare: PropTypes.bool,
   oldPrice: PropTypes.number,
+  id: PropTypes.string,
+  addToCompare: PropTypes.func,
+  countProductToCompare: PropTypes.func,
 };
 
 export default ProductBox;
