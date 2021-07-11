@@ -15,6 +15,7 @@ $white6: rgb(216, 216, 216);
 $white7: rgb(224, 227, 237);
 $ivory: #b6b6b6;
 $black-transaprent: rgba(1, 2, 2, 0.2);
+$transparent: transparent;
 
 /* COMPONENT COLOURS - for use in other files */
 
@@ -39,9 +40,9 @@ $feature-box-background: $white;
 $feature-box-color: $gray2;
 $feature-box-color-active: $white;
 
-$product-box-color: $white;
+$product-box-color: $transparent;
 $product-box-border: $white2;
-$photo-color: $white3;
+$photo-color: $transparent;
 
 $sale-color: $white;
 $sale-background: $gray3;
