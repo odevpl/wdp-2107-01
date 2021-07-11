@@ -14,7 +14,6 @@ import Button from '../Button/Button';
 
 
 const ProductBox = ({ name, price, promo, stars, image, oldPrice, favourite, compare }) => (
-
   <div className={styles.root}>
     <div className={styles.photo}>
       {promo && <div className={styles.sale}>{promo}</div>}
