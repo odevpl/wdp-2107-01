@@ -1,5 +1,17 @@
 @import "../../../styles/settings.scss";
 
+@mixin tablet {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
 .root {
   border: 1px solid $form-border-color;
   display: inline-flex;
@@ -41,6 +53,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    justify-content: space-between;
 
     input {
       border: 0;
@@ -84,6 +97,24 @@
 }
 
 
+@media (max-width: 483px) {
+  .root {
+    .category {
+      border-right: 0;
+    }
 
+    .searchField {
+      border-top: 1px solid $form-border-color;
+    }
+  }
 
+  .root:hover {
+    .category {
+      border-right: 0;
+    }
 
+    .searchField {
+      border-top: 1px solid $primary;
+    }
+  }
+}
