@@ -4,6 +4,7 @@
   padding: $base-padding 0;
 
   .bigSquare {
+    display:flex;
     width: 400px;
     height: 400px;
     background-color: $white3;
@@ -11,13 +12,13 @@
   }
 
   .gallery {
+    position: absolute;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5%;
     height: 15%;
+    width:85%;
 
     .smallSquare {
       margin: 0 5px;
@@ -29,7 +30,7 @@
   }
 
   .arrow {
-    margin: 0 auto;
+    margin: 0 5px;
     height: 30px;
     width: 30px;
     font-size: 18px;
@@ -128,7 +129,7 @@
 
     }
 
-    .state {
+    .actionButton {
       margin: 5px;
 
       &:hover {

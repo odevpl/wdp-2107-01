@@ -32,12 +32,10 @@ const ProductPage = stars => {
               <Button variant='outline' className={styles.arrow}>
                 <FontAwesomeIcon icon={faAngleLeft}>Left</FontAwesomeIcon>
               </Button>
-              <div>
-                <div className={styles.smallSquare} />
-                <div className={styles.smallSquare} />
-                <div className={styles.smallSquare} />
-                <div className={styles.smallSquare} />
-              </div>
+              <div className={styles.smallSquare} />
+              <div className={styles.smallSquare} />
+              <div className={styles.smallSquare} />
+              <div className={styles.smallSquare} />
               <Button variant='outline' className={styles.arrow}>
                 <FontAwesomeIcon icon={faAngleRight}>Right</FontAwesomeIcon>
               </Button>
@@ -82,30 +80,28 @@ const ProductPage = stars => {
                   <FontAwesomeIcon icon={faShoppingBasket} />
                   ADD TO CART
                 </Button>
-                <Button variant='outline' className={styles.state}>
-                  <FontAwesomeIcon icon={faHeart} className>
-                    Favorite
-                  </FontAwesomeIcon>
+                <Button variant='outline' className={styles.actionButton}>
+                  <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
                 </Button>
-                <Button variant='outline' className={styles.state}>
+                <Button variant='outline' className={styles.actionButton}>
                   <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
                 </Button>
-                <Button variant='outline' className={styles.state}>
+                <Button variant='outline' className={styles.actionButton}>
                   <FontAwesomeIcon icon={faEnvelope}>Email</FontAwesomeIcon>
                 </Button>
               </div>
               <div className={styles.quantity}>
                 <p>Quantity:</p>
                 <input type='number' />
-                <Button variant='outline' className={styles.state}>
+                <Button variant='outline' className={styles.actionButton}>
                   <FontAwesomeIcon icon={faPlus}>Add one</FontAwesomeIcon>
                 </Button>
-                <Button variant='outline' className={styles.state}>
+                <Button variant='outline' className={styles.actionButton}>
                   <FontAwesomeIcon icon={faMinus}>Remove one</FontAwesomeIcon>
                 </Button>
               </div>
             </div>
-            <div className={styles.descripion}>
+            <div className={styles.description}>
               <h4>Product description</h4>
               <p>
                 Mauris finibus, nulla nec pharetra vulputate, augue metus laoreet massa,

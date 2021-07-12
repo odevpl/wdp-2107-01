@@ -1,5 +1,5 @@
 {
-  "name": "pizzeria-portal",
+  "name": "Furniture-shop",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -47,7 +47,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
-    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "bootstrap": "^4.6.0",
@@ -60,9 +60,11 @@
     "react-bootstrap": "^1.6.1",
     "react-bootstrap-star-rating": "^3.5.5-alpha.0.3",
     "react-dom": "^16.14.0",
+    "react-fontawesome": "^1.7.1",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^4.0.3",
+    "react-svg": "^14.0.3",
     "react-test-renderer": "^16.9.0",
     "redux": "^4.0.4",
     "start": "^5.1.0"
