@@ -1,6 +1,16 @@
 @import "../../../styles/settings.scss";
 
+@mixin small {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
 .root {
+  @include small {
+    text-align: center;
+  }
+  
   .footerMenu {
     background-color: $footer-bg;
     padding: 3rem 0;
