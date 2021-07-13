@@ -65,7 +65,6 @@
   }
 
   &.active:hover {
-    // transform: scale(0.98);
     transition-duration: 1sg;
     @extend %hoverEffects;
 
