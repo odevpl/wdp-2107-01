@@ -13,6 +13,7 @@ import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 
 const ProductBox = ({
+  id,
   name,
   price,
   promo,
@@ -21,6 +22,8 @@ const ProductBox = ({
   oldPrice,
   favourite,
   compare,
+  countProductToCompare,
+  addToCompare,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -92,7 +95,6 @@ ProductBox.propTypes = {
   favourite: PropTypes.bool,
   compare: PropTypes.bool,
   oldPrice: PropTypes.number,
-  id: PropTypes.string,
   addToCompare: PropTypes.func,
   countProductToCompare: PropTypes.func,
 };
