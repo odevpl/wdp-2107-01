@@ -43,6 +43,10 @@
         border-color: $primary;
       }
 
+      &:hover {
+        @extend %hoverEffects;
+      }
+
       &.active {
         border-color: $text-color;
       }

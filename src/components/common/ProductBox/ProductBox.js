@@ -95,7 +95,6 @@ ProductBox.propTypes = {
   favourite: PropTypes.bool,
   compare: PropTypes.bool,
   oldPrice: PropTypes.number,
-  id: PropTypes.string,
   addToCompare: PropTypes.func,
   countProductToCompare: PropTypes.func,
 };
