@@ -7,12 +7,27 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid $dark-gray;
-    padding: $base-padding 0;
 
     h4 {
       text-transform: uppercase;
       margin: 0;
       font-weight: 700;
     }
+  }
+
+  .BoxProdList {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    margin: 0 15px;
+
+  }
+
+  .BoxFilters {
+    display: flex;
+    width: 94%;
+    height: 100%;
+    background-color: ghostwhite;
   }
 }

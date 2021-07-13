@@ -13,22 +13,22 @@ import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 
 const ProductBox = ({
+  id,
   name,
   price,
   promo,
   stars,
   image,
   oldPrice,
-  compare,
-  id,
-  addToCompare,
-  countProductToCompare,
   favourite,
+  compare,
+  countProductToCompare,
+  addToCompare,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
-      {promo && <div className={styles.sale}>{promo}</div>}
-      <Link to={`/product/${id}`}>
+      <Link to={`/product/${name}`}>
+        {promo && <div className={styles.sale}>{promo}</div>}
         <img className={styles.image} src={image} alt={name} />
       </Link>
       <div className={styles.buttons}>
@@ -56,7 +56,7 @@ const ProductBox = ({
     </div>
     <div className={styles.line} />
     <div className={styles.actions}>
-      <div className={styles.outlines}>
+      <div className='outlines'>
         <Button className={favourite ? styles.active : undefined} variant='outline'>
           <FontAwesomeIcon icon={favourite ? farHeart : faHeart}>
             Favorite
@@ -75,7 +75,7 @@ const ProductBox = ({
         </Button>
       </div>
       <div className={styles.price}>
-        <div className={styles.oldprice}>{oldPrice}</div>
+        <div className={styles.oldPrice}>{oldPrice}</div>
         <Button noHover variant='small'>
           $ {price}
         </Button>

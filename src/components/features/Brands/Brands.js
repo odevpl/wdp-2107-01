@@ -8,7 +8,9 @@ const Brands = () => {
       <div className='container pb-3'>
         <div className='row '>
           <div className='col-12 justify-content-between'>
-            <div className={styles.brands}></div>
+            <div className={styles.brands}>
+              <h5>BRANDS</h5>
+            </div>
           </div>
         </div>
       </div>

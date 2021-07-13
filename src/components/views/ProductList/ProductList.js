@@ -11,10 +11,20 @@ const ProductList = () => {
         <Banner />
         <div className='row'>
           <div className='col-lg-9'>
-            <h4>Product List</h4>
+            <div className={styles.BoxProdList}>
+              <h4>Here will be product list</h4>
+              <p>
+                Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab
+                illo inventore veritatis et quasi architecto beatae vitae dicta sunt,
+                explicabo.{' '}
+              </p>
+            </div>
           </div>
-          <div className={'col-3'}>
-            <div className='col-3'>FILTERS</div>
+          <div className='col-3'>
+            <div className={styles.BoxFilters}>
+              <h4>FILTERS</h4>
+            </div>
           </div>
           <div className='col-12'>
             <Brands />

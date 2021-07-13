@@ -1,5 +1,17 @@
 @import "../../../styles/settings.scss";
 
+@mixin tablet {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
 .root {
   box-shadow: 2px 3.464px 6px $box-shadow;
   background-color: #ffffff;
@@ -48,4 +60,147 @@
       }
     }
   }
+
+  .dropdown {
+    display: none;
+  }
 }
+
+@media (max-width: 1200px) {
+  .root {
+    .menu {
+
+      a {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .root {
+    :global(.container) > :global(.row) {
+      height: fit-content;
+    }
+
+     .search {
+      text-align: center;
+      order: 2;
+
+      form {
+        height: fit-content;
+        width: 469px;
+
+        div {
+          width: 50%;
+        }
+      }
+    }
+
+    .menu {
+      order: 1;
+      width: 100%;
+
+      ul {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .root {
+
+   .menu {
+     visibility: hidden;
+     position: absolute;
+     right: 1.5rem;
+     z-index: 4;
+
+     ul {
+       flex-direction: column;
+
+       li {
+         z-index: 1;
+
+         a{
+           width: 100%;
+         }
+       }
+     }
+
+     ul::before {
+      position: absolute;
+      content: ' ';
+      display: block;
+      width: 91px;
+      height: 100%;
+      background-color: $feature-box-background;
+      box-shadow: 1px 10px 10px 1px black;
+      z-index: 0;
+     }
+   }
+
+   .activeMenu {
+     visibility: visible;
+   }
+
+   .search {
+      text-align: center;
+      width: fit-content;
+
+      form {
+        height: fit-content;
+        width: fit-content;
+
+        div {
+          width: 100%;
+        }
+      }
+    }
+
+   .dropdown {
+     display: block;
+     text-align: end;
+     font-size: 1rem;
+     order: 2;
+     z-index: 4;
+   }
+  }
+}
+
+@media (max-width: 483px) {
+  .root {
+    .menu {
+
+      a {
+        border-right: 0;
+      }
+    }
+
+    .search {
+      width: 67%;
+
+       form {
+         flex-direction: column;
+         width: 100%;
+       }
+
+       div {
+         select {
+           width: 100%;
+           overflow: hidden;
+         }
+
+         input{
+           overflow: hidden;
+         }
+       }
+     }
+
+    .dropdown {
+      text-align: center;
+    }
+  }
+}
+
