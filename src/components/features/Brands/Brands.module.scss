@@ -1,0 +1,31 @@
+@import '../../../styles/settings.scss';
+
+.root {
+
+  .brands {
+    border-top: 1px solid $feature-border-color;
+    border-bottom: 1px solid $feature-border-color;
+
+    button[type='button'] {
+      outline: none;
+      background-color: $button-bg;
+      color: $button-color;
+      height: 92px;
+      max-width: 33px;
+      min-width: 33px;
+      font-size: small;
+      border-radius: 0;
+
+      &:hover {
+        color: $primary;
+        background-color: $button-bg;
+
+        &:enabled {
+          background-color: $button-bg;
+
+        }
+      }
+    }
+  }
+}
+

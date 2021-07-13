@@ -29,12 +29,12 @@ const ProductBox = ({
     <div className={styles.photo}>
       {promo && <div className={styles.sale}>{promo}</div>}
       <Link to={`/product/${id}`}>
-        <img className={styles.image} src={image} alt={'coming soon'} />
+        <img className={styles.image} src={image} alt={name} />
       </Link>
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
         <Button variant='small'>
-          <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+          <FontAwesomeIcon icon={faShoppingBasket} /> ADD TO CART
         </Button>
       </div>
     </div>
@@ -54,7 +54,7 @@ const ProductBox = ({
         ))}
       </div>
     </div>
-    <div className={styles.line}></div>
+    <div className={styles.line} />
     <div className={styles.actions}>
       <div className={styles.outlines}>
         <Button className={favourite ? styles.active : undefined} variant='outline'>
@@ -95,7 +95,6 @@ ProductBox.propTypes = {
   favourite: PropTypes.bool,
   compare: PropTypes.bool,
   oldPrice: PropTypes.number,
-  id: PropTypes.string,
   addToCompare: PropTypes.func,
   countProductToCompare: PropTypes.func,
 };

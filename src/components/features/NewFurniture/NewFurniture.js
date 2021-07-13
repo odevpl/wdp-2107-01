@@ -5,6 +5,7 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 import Swipeable from '../../common/Swipeable/Swipeable';
+import { Link } from 'react-router-dom';
 
 class NewFurniture extends React.Component {
   state = {
@@ -44,13 +45,14 @@ class NewFurniture extends React.Component {
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li>
-          <a
+        <li key={i}>
+          <Link
+            to='/#'
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
           >
             page {i}
-          </a>
+          </Link>
         </li>
       );
     }
