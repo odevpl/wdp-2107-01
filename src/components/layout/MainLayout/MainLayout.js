@@ -1,11 +1,10 @@
-import React , { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const MainLayout = ({ children, changeDevice }) => {
-
   const [size, setSize] = useState(window.innerWidth);
 
   const checkSize = () => {
@@ -15,11 +14,10 @@ const MainLayout = ({ children, changeDevice }) => {
   useEffect(() => {
     window.addEventListener('resize', checkSize);
     changeDevice(checkDevice());
-    console.log(checkDevice());
     return () => {
       window.removeEventListener('resize', checkSize);
     };
-  }, [changeDevice, checkDevice, size]);
+  });
 
   const checkDevice = () => {
     let device = 'xs';
@@ -37,7 +35,6 @@ const MainLayout = ({ children, changeDevice }) => {
     </div>
   );
 };
-
 
 MainLayout.propTypes = {
   children: PropTypes.node,
