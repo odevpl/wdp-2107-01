@@ -123,3 +123,9 @@
     }
   }
 }
+
+@media (max-width: 575px) {
+  .price {
+    flex-direction: column;
+  }
+}
