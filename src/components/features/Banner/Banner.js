@@ -1,8 +1,5 @@
 import React from 'react';
 import styles from './Banner.module.scss';
-import Button from '../../common/Button/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const Banner = () => (
   <div className='container'>
