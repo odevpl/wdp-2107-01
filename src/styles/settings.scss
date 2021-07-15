@@ -89,7 +89,15 @@ $box-shadow: $black-transaprent;
 
 $list-link: $white;
 
-
 /* Paddings */
 $base-padding: 24px;
 
+<<<<<<< HEAD
+=======
+/* HOVER EFFECTS */
+
+%hoverEffects {
+  transition: 2500ms;
+  transform: translate(0px, -10px);
+}
+>>>>>>> 76bc0d574dc92817c9a70173b005265a307d19a5
