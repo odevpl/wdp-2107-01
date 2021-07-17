@@ -1,0 +1,144 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  .section {
+    height: 450px;
+    margin-bottom: 50px;
+
+    .mainDeal {
+      height: 400px;
+      margin-top: 30px;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .shadowBox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 87%;
+        height: 85%;
+        background-color: $deals-shadowbox-color;
+
+        .mainDescription {
+          display: flex;
+          flex-direction: column;
+          color: $sale-color;
+          height: 100%;
+          width: 60%;
+          justify-content: flex-end;
+          padding-left: 0;
+          padding-bottom: 30px;
+          font-weight: bold;
+
+          .mainText {
+            font-weight: bold;
+            line-height: 1;
+            padding-bottom: 15px;
+
+            span {
+              font-size: 48px;
+            }
+          }
+
+          .mainNumber {
+            font-size: 40px;
+            outline: 5px solid $sale-color;
+            outline-offset: 6px;
+            margin-left: 12px;
+          }
+        }
+      }
+    }
+
+    .deal{
+      height: 185px;
+      margin-top: 30px;
+      padding: 0;
+      overflow: hidden;
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .light {
+        font-weight: 300;
+      }
+
+      .topBox {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        background-color: $deals-topbox-background;
+        align-items: center;
+        justify-content: center;
+
+        .leftImg {
+          position: absolute;
+          height: 100%;
+          left: -10%;
+          transform: scale(1.40);
+        }
+
+        .rightImg {
+          position: absolute;
+          height: 100%;
+          right: -10%;
+          transform: scale(1.2);
+        }
+
+        .topBoxDescription {
+          width: 50%;
+          z-index: 1;
+          padding-left: 30px;
+
+          h2 {
+            line-height: 1;
+          }
+
+          .topSmallText {
+            font-weight: bold;
+            letter-spacing: 4px;
+            font-size: 16px;
+          }
+
+          .topBoxNumber {
+            color: $primary;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .bottomBox {
+        display: flex;
+        height: 100%;
+        background-color: $deals-bottombox-background;
+        align-items: center;
+        justify-content: flex-end;
+
+        .bottomImg {
+          position: absolute;
+          height: 120%;
+          left: -15%;
+        }
+
+        .bottomBoxDescription {
+          z-index: 1;
+          text-align: end;
+          padding-right: 15px;
+
+          h3 {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
