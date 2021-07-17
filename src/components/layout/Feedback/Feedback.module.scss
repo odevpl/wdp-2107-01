@@ -1,0 +1,113 @@
+@import "../../../styles/settings.scss";
+
+.root {
+
+  .panelBar {
+    margin: 60px 0 30px 0;
+    position: relative;
+
+    :global(.row) > * {
+      border-bottom: 4px solid #e2e2e2;  
+    }
+    .headingEmpty {
+      border-bottom: 4px solid #e2e2e2;
+      width: 888px;
+    }
+
+    .heading {
+      position: relative;
+
+      .title {
+        color: $primary;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 38px;
+        margin: 0;
+        letter-spacing: 1px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 45px;
+        border-bottom: 4px solid $primary;
+      }
+    }
+
+    .dots {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      ul {
+        margin: 0;
+        padding: 0 0 0 1rem;
+        list-style: none;
+        background-color: #ffffff;
+        transform: translateY(15px);
+        width: 100px;
+
+        li {
+          display: inline-flex;
+          margin-left: 0.5rem;
+
+          a {
+            display: block;
+            width: 13px;
+            height: 13px;
+            border-radius: 6px;
+            background-color: #e1e1e1;
+            font-size: 0;
+            margin-right: 8px;
+            margin-top: 20px;
+
+            &.active,
+            &:hover {
+              background-color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .icon {
+    font-size: 30px;
+    text-align: center;
+    height: 60px;
+  }
+
+  .opinion {
+    font-size: 14px;
+    text-align: center;
+    padding: 0 120px;
+    margin-bottom: 24px;
+  }
+
+  .clientsData {
+    margin: 0 0 80px 460px;
+    display: inline-flex
+  }
+
+  .client_image {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+  }
+
+  .client_nameAndType {
+    margin-left: 12px;
+    text-align: center;
+  }
+
+  .client_name {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .client_type {
+    margin-top: 10px;
+  }
+}

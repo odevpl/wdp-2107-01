@@ -7,12 +7,14 @@ import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 
 import ProductCompare from '../../features/ProductCompare/ProductCompareContainer';
+import Feedback from '../../layout/Feedback/FeedbackContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
     <FeatureBoxes />
     <NewFurniture />
     <ProductCompare />
+    <Feedback />
   </div>
 );
 
