@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import { changeDevice } from '../../../redux/sizeRedux';
 
-
 const mapDispatchToProps = dispatch => ({
   changeDevice: device => dispatch(changeDevice(device)),
 });
