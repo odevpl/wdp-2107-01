@@ -11,6 +11,7 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    fade: 'fadein',
   };
 
   handlePageChange(newPage) {
@@ -18,7 +19,17 @@ class NewFurniture extends React.Component {
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.setUpdate();
+    setTimeout(() => {
+      this.setState({ activeCategory: newCategory });
+    }, 2000);
+  }
+
+  setUpdate() {
+    this.setState({ fade: 'fadeout' });
+    setTimeout(() => {
+      this.setState({ fade: 'fadein' });
+    }, 2000);
   }
 
   render() {
@@ -55,7 +66,6 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
-
     return (
       <Swipeable leftAction={leftAction} rightAction={rightAction}>
         <div className={styles.root}>
@@ -84,11 +94,11 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-            <div className='row'>
+            <div className={`row ${this.state.fade}`}>
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
-                  <div key={item.id} className='col-lg-3 col-md-4 col-sm-6 col-xs-12'>
+                  <div key={item.id} className={`col-lg-3 col-md-4 col-sm-6 col-xs-12`}>
                     <ProductBox {...item} />
                   </div>
                 ))}
