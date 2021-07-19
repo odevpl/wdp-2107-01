@@ -13,7 +13,27 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elit eros, sodales vitae turpis id, gravida placerat turpis. Donec non pulvinar leo. Aliquam erat volutpat. Ut ultricies auctor sem ac dapibus.',
       client_image: '/images/feedback/john-smith.jpg',
       client_name: 'John Smith',
-      client_type: 'Furniture client',
+      client_type: 'Furniture client'
+    }
+  ],
+  deals: [
+    {
+      id: 1,
+      name: 'GUEST ROOM SOFA -20%',
+      firstImage: '/images/deals/sofa_1.jpg',
+      secondImage: '',
+    },
+    {
+      id: 2,
+      name: 'OFFICE CHAIR COLLECTION $200.00',
+      firstImage: '/images/deals/chair_1.png',
+      secondImage: '/images/deals/chair_2.png',
+    },
+    {
+      id: 3,
+      name: 'SPECIAL COLLECTION SAVE UP 45% OF FURNITURE',
+      firstImage: '/images/deals/bed_1.png',
+      secondImage: '',
     },
   ],
   brands: [
