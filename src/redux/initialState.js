@@ -13,8 +13,8 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elit eros, sodales vitae turpis id, gravida placerat turpis. Donec non pulvinar leo. Aliquam erat volutpat. Ut ultricies auctor sem ac dapibus.',
       client_image: '/images/feedback/john-smith.jpg',
       client_name: 'John Smith',
-      client_type: 'Furniture client'
-    }
+      client_type: 'Furniture client',
+    },
   ],
   deals: [
     {

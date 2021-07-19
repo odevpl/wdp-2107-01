@@ -17,7 +17,7 @@ const reducers = {
   brands: brandsReducer,
   size: sizeReducer,
   feedbacks: feedbackReducer,
-  deals: dealsReducer
+  deals: dealsReducer,
 };
 
 // add blank reducers for initial state properties without reducers
