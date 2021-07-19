@@ -60,6 +60,7 @@
     "react-bootstrap": "^1.6.1",
     "react-bootstrap-star-rating": "^3.5.5-alpha.0.3",
     "react-dom": "^16.14.0",
+    "react-flexbox-grid": "^2.1.2",
     "react-fontawesome": "^1.7.1",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
