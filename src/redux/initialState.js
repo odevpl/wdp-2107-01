@@ -10,7 +10,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-1',
       name: 'Aenean Ru Bristique 1',
-      image: '/images/furniture/furniture-1.jpg',
+      image: '/images/furniture/bed/furniture-1.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '$40',
@@ -23,7 +23,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-2',
       name: 'Aenean Ru Bristique 2',
-      image: '/images/furniture/furniture-2.jpg',
+      image: '/images/furniture/bed/furniture-2.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -36,7 +36,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-3',
       name: 'Aenean Ru Bristique 3',
-      image: '/images/furniture/furniture-3.jpg',
+      image: '/images/furniture/bed/furniture-3.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -49,7 +49,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-4',
       name: 'Aenean Ru Bristique 4',
-      image: '/images/furniture/furniture-4.jpg',
+      image: '/images/furniture/bed/furniture-4.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '$35',
@@ -62,7 +62,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-5',
       name: 'Aenean Ru Bristique 5',
-      image: '/images/furniture/furniture-5.jpg',
+      image: '/images/furniture/bed/furniture-5.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -75,7 +75,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-6',
       name: 'Aenean Ru Bristique 6',
-      image: '/images/furniture/furniture-6.jpg',
+      image: '/images/furniture/bed/furniture-6.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '$40',
@@ -88,7 +88,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-7',
       name: 'Aenean Ru Bristique 7',
-      image: '/images/furniture/furniture-7.jpg',
+      image: '/images/furniture/bed/furniture-7.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -101,7 +101,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-8',
       name: 'Aenean Ru Bristique 8',
-      image: '/images/furniture/furniture-8.jpg',
+      image: '/images/furniture/bed/furniture-8.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '$65',
@@ -114,7 +114,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-9',
       name: 'Aenean Ru Bristique 9',
-      image: '/images/furniture/furniture-9.jpg',
+      image: '/images/furniture/bed/furniture-9.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '$50',
@@ -127,7 +127,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-10',
       name: 'Aenean Ru Bristique 10',
-      image: '/images/furniture/furniture-10.jpg',
+      image: '/images/furniture/bed/furniture-10.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -140,7 +140,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-11',
       name: 'Aenean Ru Bristique 11',
-      image: '/images/furniture/furniture-11.jpg',
+      image: '/images/furniture/bed/furniture-11.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -153,7 +153,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-12',
       name: 'Aenean Ru Bristique 12',
-      image: '/images/furniture/furniture-12.jpg',
+      image: '/images/furniture/bed/furniture-12.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -166,7 +166,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-13',
       name: 'Aenean Ru Bristique 13',
-      image: '/images/furniture/furniture-1.jpg',
+      image: '/images/furniture/bed/furniture-1.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -179,7 +179,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-14',
       name: 'Aenean Ru Bristique 14',
-      image: '/images/furniture/furniture-2.jpg',
+      image: '/images/furniture/bed/furniture-2.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -192,7 +192,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-15',
       name: 'Aenean Ru Bristique 15',
-      image: '/images/furniture/furniture-3.jpg',
+      image: '/images/furniture/bed/furniture-3.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -205,7 +205,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-16',
       name: 'Aenean Ru Bristique 16',
-      image: '/images/furniture/furniture-4.jpg',
+      image: '/images/furniture/bed/furniture-4.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -218,7 +218,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-17',
       name: 'Aenean Ru Bristique 17',
-      image: '/images/furniture/furniture-5.jpg',
+      image: '/images/furniture/bed/furniture-5.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -231,7 +231,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-18',
       name: 'Aenean Ru Bristique 18',
-      image: '/images/furniture/furniture-6.jpg',
+      image: '/images/furniture/bed/furniture-6.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -244,7 +244,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-19',
       name: 'Aenean Ru Bristique 19',
-      image: '/images/furniture/furniture-7.jpg',
+      image: '/images/furniture/bed/furniture-7.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -257,7 +257,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-20',
       name: 'Aenean Ru Bristique 20',
-      image: '/images/furniture/furniture-8.jpg',
+      image: '/images/furniture/bed/furniture-8.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -270,7 +270,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-21',
       name: 'Aenean Ru Bristique 21',
-      image: '/images/furniture/furniture-9.jpg',
+      image: '/images/furniture/bed/furniture-9.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -283,7 +283,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-22',
       name: 'Aenean Ru Bristique 22',
-      image: '/images/furniture/furniture-10.jpg',
+      image: '/images/furniture/bed/furniture-10.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -296,7 +296,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-23',
       name: 'Aenean Ru Bristique 23',
-      image: '/images/furniture/furniture-11.jpg',
+      image: '/images/furniture/bed/furniture-11.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -309,7 +309,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-24',
       name: 'Aenean Ru Bristique 24',
-      image: '/images/furniture/furniture-12.jpg',
+      image: '/images/furniture/bed/furniture-12.jpg',
       category: 'bed',
       price: 30,
       oldPrice: '',
@@ -322,7 +322,7 @@ const initialState = {
     {
       id: 'amazing-chair-1',
       name: 'Amazing Chair 1',
-      image: '/images/furniture/chair-1.jpg',
+      image: '/images/furniture/chair/chair-1.jpg',
       category: 'chair',
       price: 200,
       oldPrice: '300',
@@ -335,7 +335,7 @@ const initialState = {
     {
       id: 'amazing-chair-2',
       name: 'Amazing Chair 2',
-      image: '/images/furniture/chair-2.jpg',
+      image: '/images/furniture/chair/chair-2.jpg',
       category: 'chair',
       price: 200,
       oldPrice: '300',
@@ -348,7 +348,7 @@ const initialState = {
     {
       id: 'amazing-chair-3',
       name: 'Amazing Chair 3',
-      image: '/images/furniture/chair-3.jpg',
+      image: '/images/furniture/chair/chair-3.jpg',
       category: 'chair',
       price: 200,
       oldPrice: '300',
@@ -361,7 +361,7 @@ const initialState = {
     {
       id: 'amazing-chair-4',
       name: 'Amazing Chair 4',
-      image: '/images/furniture/chair-4.jpg',
+      image: '/images/furniture/chair/chair-4.jpg',
       category: 'chair',
       price: 200,
       oldPrice: '300',
@@ -374,7 +374,7 @@ const initialState = {
     {
       id: 'amazing-chair-5',
       name: 'Amazing Chair 5',
-      image: '/images/furniture/chair-5.jpg',
+      image: '/images/furniture/chair/chair-5.jpg',
       category: 'chair',
       price: 200,
       oldPrice: '300',
@@ -387,7 +387,7 @@ const initialState = {
     {
       id: 'pure-brilliant-sofa-1',
       name: 'Pure Brillian Sofa 1',
-      image: '/images/furniture/sofa-1.jpg',
+      image: '/images/furniture/sofa/sofa-1.jpg',
       category: 'sofa',
       price: 200,
       oldPrice: '1500',
@@ -400,7 +400,7 @@ const initialState = {
     {
       id: 'pure-brilliant-sofa-2',
       name: 'Pure Brillian Sofa 2',
-      image: '/images/furniture/sofa-2.jpg',
+      image: '/images/furniture/sofa/sofa-2.jpg',
       category: 'sofa',
       price: 200,
       oldPrice: '1500',
@@ -413,7 +413,7 @@ const initialState = {
     {
       id: 'pure-brilliant-sofa-3',
       name: 'Pure Brillian Sofa 3',
-      image: '/images/furniture/sofa-3.jpg',
+      image: '/images/furniture/sofa/sofa-3.jpg',
       category: 'sofa',
       price: 200,
       oldPrice: '1500',
@@ -426,7 +426,7 @@ const initialState = {
     {
       id: 'pure-brilliant-sofa-4',
       name: 'Pure Brillian Sofa 4',
-      image: '/images/furniture/sofa-4.jpg',
+      image: '/images/furniture/sofa/sofa-4.jpg',
       category: 'sofa',
       price: 200,
       oldPrice: '1500',
@@ -439,7 +439,7 @@ const initialState = {
     {
       id: 'pure-brilliant-sofa-5',
       name: 'Pure Brillian Sofa 5',
-      image: '/images/furniture/sofa-5.jpg',
+      image: '/images/furniture/sofa/sofa-5.jpg',
       category: 'sofa',
       price: 200,
       oldPrice: '1500',
@@ -452,7 +452,7 @@ const initialState = {
     {
       id: 'pure-brilliant-sofa-6',
       name: 'Pure Brillian Sofa 6',
-      image: '/images/furniture/sofa-6.jpg',
+      image: '/images/furniture/sofa/sofa-6.jpg',
       category: 'sofa',
       price: 200,
       oldPrice: '1500',
@@ -465,7 +465,7 @@ const initialState = {
     {
       id: 'pure-brilliant-sofa-7',
       name: 'Pure Brillian Sofa 7',
-      image: '/images/furniture/sofa-7.jpg',
+      image: '/images/furniture/sofa/sofa-7.jpg',
       category: 'sofa',
       price: 200,
       oldPrice: '1500',
@@ -478,7 +478,7 @@ const initialState = {
     {
       id: 'pure-brilliant-sofa-8',
       name: 'Pure Brillian Sofa 8',
-      image: '/images/furniture/sofa-8.jpg',
+      image: '/images/furniture/sofa/sofa-8.jpg',
       category: 'sofa',
       price: 200,
       oldPrice: '1500',
@@ -491,7 +491,7 @@ const initialState = {
     {
       id: 'pure-brilliant-sofa-9',
       name: 'Pure Brillian Sofa 9',
-      image: '/images/furniture/sofa-9.jpg',
+      image: '/images/furniture/sofa/sofa-9.jpg',
       category: 'sofa',
       price: 200,
       oldPrice: '1500',
@@ -504,7 +504,7 @@ const initialState = {
     {
       id: 'flat-table-1',
       name: 'Flat Table 1',
-      image: '/images/furniture/table-1.jpg',
+      image: '/images/furniture/table/table-1.jpg',
       category: 'table',
       price: 200,
       oldPrice: '100',
@@ -517,7 +517,7 @@ const initialState = {
     {
       id: 'flat-table-2',
       name: 'Flat Table 2',
-      image: '/images/furniture/table-2.jpg',
+      image: '/images/furniture/table/table-2.jpg',
       category: 'table',
       price: 200,
       oldPrice: '100',
@@ -530,7 +530,7 @@ const initialState = {
     {
       id: 'flat-table-3',
       name: 'Flat Table 3',
-      image: '/images/furniture/table-3.jpg',
+      image: '/images/furniture/table/table-3.jpg',
       category: 'table',
       price: 200,
       oldPrice: '100',
@@ -543,7 +543,7 @@ const initialState = {
     {
       id: 'flat-table-4',
       name: 'Flat Table 4',
-      image: '/images/furniture/table-4.jpg',
+      image: '/images/furniture/table/table-4.jpg',
       category: 'table',
       price: 200,
       oldPrice: '100',
@@ -556,7 +556,7 @@ const initialState = {
     {
       id: 'flat-table-5',
       name: 'Flat Table 5',
-      image: '/images/furniture/table-5.jpg',
+      image: '/images/furniture/table/table-5.jpg',
       category: 'table',
       price: 200,
       oldPrice: '100',
@@ -569,7 +569,7 @@ const initialState = {
     {
       id: 'flat-table-6',
       name: 'Flat Table 6',
-      image: '/images/furniture/table-6.jpg',
+      image: '/images/furniture/table/table-6.jpg',
       category: 'table',
       price: 200,
       oldPrice: '100',
@@ -582,7 +582,7 @@ const initialState = {
     {
       id: 'flat-table-7',
       name: 'Flat Table 7',
-      image: '/images/furniture/table-7.jpg',
+      image: '/images/furniture/table/table-7.jpg',
       category: 'table',
       price: 200,
       oldPrice: '100',
@@ -595,7 +595,7 @@ const initialState = {
     {
       id: 'better-dinner-1',
       name: 'Better Dinner 1',
-      image: '/images/furniture/dining-1.jpg',
+      image: '/images/furniture/dining/dining-1.jpg',
       category: 'dining',
       price: 200,
       oldPrice: '100',
@@ -608,7 +608,7 @@ const initialState = {
     {
       id: 'better-dinner-2',
       name: 'Better Dinner 2',
-      image: '/images/furniture/dining-2.jpg',
+      image: '/images/furniture/dining/dining-2.jpg',
       category: 'dining',
       price: 200,
       oldPrice: '100',
@@ -621,7 +621,7 @@ const initialState = {
     {
       id: 'better-dinner-3',
       name: 'Better Dinner 3',
-      image: '/images/furniture/dining-3.jpg',
+      image: '/images/furniture/dining/dining-3.jpg',
       category: 'dining',
       price: 200,
       oldPrice: '100',
@@ -634,7 +634,7 @@ const initialState = {
     {
       id: 'better-dinner-4',
       name: 'Better Dinner 4',
-      image: '/images/furniture/dining-4.jpg',
+      image: '/images/furniture/dining/dining-4.jpg',
       category: 'dining',
       price: 200,
       oldPrice: '100',
@@ -647,7 +647,7 @@ const initialState = {
     {
       id: 'better-dinner-5',
       name: 'Better Dinner 5',
-      image: '/images/furniture/dining-5.jpg',
+      image: '/images/furniture/dining/dining-5.jpg',
       category: 'dining',
       price: 200,
       oldPrice: '100',
@@ -660,7 +660,7 @@ const initialState = {
     {
       id: 'better-dinner-6',
       name: 'Better Dinner 6',
-      image: '/images/furniture/dining-6.jpg',
+      image: '/images/furniture/dining/dining-6.jpg',
       category: 'dining',
       price: 200,
       oldPrice: '100',
