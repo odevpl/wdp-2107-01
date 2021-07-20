@@ -1,9 +1,15 @@
 import { connect } from 'react-redux';
 import Gallery from './Gallery';
-import { getAll } from '../../../redux/galleryRedux.js';
+import {
+  getGalleryProducts,
+  getSelectedProduct,
+} from '../../../redux/productsRedux.js';
+import { getGalleryDeal } from '../../../redux/dealsRedux';
 
 const mapStateToProps = state => ({
-  gallery: getAll(state),
+  galleryProducts: getGalleryProducts(state),
+  selectedProduct: getSelectedProduct(state),
+  galleryDeal: getGalleryDeal(state),
 });
 
 export default connect(mapStateToProps)(Gallery);

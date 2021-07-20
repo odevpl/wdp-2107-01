@@ -1,4 +1,6 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,6 +15,8 @@ import Button from '../../common/Button/Button';
 
 class Gallery extends React.Component {
   render() {
+    const { galleryProducts, selectedProduct, galleryDeal } = this.props;
+
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -44,27 +48,29 @@ class Gallery extends React.Component {
                     </div>
                     <div className={'col-6 ' + styles.infoColumn}>
                       <div className={styles.priceCloud}>
-                        <span className={styles.newPrice}>$120.00</span>
-                        <span className={styles.oldPrice}>$160.00</span>
+                        <span className={styles.newPrice}>
+                          ${selectedProduct.price}
+                        </span>
+                        <span className={styles.oldPrice}>
+                          {selectedProduct.oldPrice}
+                        </span>
                       </div>
                       <div className={styles.ratingBar}>
-                        <p>Product Name</p>
-                        <div className={styles.rating}>
-                          <Button>
-                            <FontAwesomeIcon className={styles.checked} icon={faStar} />
-                          </Button>
-                          <Button>
-                            <FontAwesomeIcon className={styles.checked} icon={faStar} />
-                          </Button>
-                          <Button>
-                            <FontAwesomeIcon className={styles.empty} icon={farStar} />
-                          </Button>
-                          <Button>
-                            <FontAwesomeIcon className={styles.empty} icon={farStar} />
-                          </Button>
-                          <Button>
-                            <FontAwesomeIcon className={styles.empty} icon={farStar} />
-                          </Button>
+                        <p>{selectedProduct.name}</p>
+                        <div className={styles.stars}>
+                          {[1, 2, 3, 4, 5].map(i => (
+                            <a key={i} href='#'>
+                              {i <= selectedProduct.stars ? (
+                                <FontAwesomeIcon icon={faStar}>
+                                  {i} stars
+                                </FontAwesomeIcon>
+                              ) : (
+                                <FontAwesomeIcon icon={farStar}>
+                                  {i} stars
+                                </FontAwesomeIcon>
+                              )}
+                            </a>
+                          ))}
                         </div>
                       </div>
                     </div>
@@ -78,28 +84,16 @@ class Gallery extends React.Component {
                         className={styles.leftArrow}
                       ></FontAwesomeIcon>
                     </div>
-                    <Button className={styles.smallProduct}>
-                      <img
-                        className={styles.selected}
-                        src={'/images/deals/bed_1.png'}
-                        alt={'bed'}
-                      ></img>
-                    </Button>
-                    <Button className={styles.smallProduct}>
-                      <img src={'/images/deals/bed_1.png'} alt={'bed'}></img>
-                    </Button>
-                    <Button className={styles.smallProduct}>
-                      <img src={'/images/deals/bed_1.png'} alt={'bed'}></img>
-                    </Button>
-                    <Button className={styles.smallProduct}>
-                      <img src={'/images/deals/bed_1.png'} alt={'bed'}></img>
-                    </Button>
-                    <Button className={styles.smallProduct}>
-                      <img src={'/images/deals/bed_1.png'} alt={'bed'}></img>
-                    </Button>
-                    <Button className={styles.smallProduct}>
-                      <img src={'/images/deals/bed_1.png'} alt={'bed'}></img>
-                    </Button>
+                    {galleryProducts.map(product => (
+                      <Button key={product.id} className={styles.smallProduct}>
+                        <img
+                          key={product.id}
+                          className={product.selected ? styles.selected : undefined}
+                          src={'/images/deals/bed_1.png'}
+                          alt={'bed'}
+                        />
+                      </Button>
+                    ))}
                     <div className={styles.arrowRight}>
                       <div className={styles.arrowShadow}></div>
                       <FontAwesomeIcon
@@ -115,12 +109,15 @@ class Gallery extends React.Component {
               <div className={'col-12 ' + styles.rightBox}>
                 <div className={styles.productDescription}>
                   <h1 className={styles.productPrice}>
-                    <span>FROM</span> $50.80
+                    <span>{galleryDeal.name.slice(0, 4)}</span>
+                    {galleryDeal.name.slice(4, 11)}
                   </h1>
-                  <h1 className={styles.productType}>Bedroom Bed</h1>
+                  <h1 className={styles.productType}>
+                    {galleryDeal.name.slice(11, 23)}
+                  </h1>
                   <Button className={styles.productButton}>SHOP NOW</Button>
                 </div>
-                <img src={'/images/deals/bed_1.png'} alt={'bed'}></img>
+                <img src={galleryDeal.firstImage} alt={galleryDeal.name}></img>
               </div>
             </div>
           </div>
@@ -129,5 +126,30 @@ class Gallery extends React.Component {
     );
   }
 }
+
+Gallery.propTypes = {
+  galleryProducts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      selected: PropTypes.bool,
+    })
+  ),
+  selectedProduct: PropTypes.objectOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      price: PropTypes.number,
+      oldPrice: PropTypes.string,
+      selected: PropTypes.bool,
+      stars: PropTypes.number,
+    })
+  ),
+  galleryDeal: PropTypes.objectOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      firstImage: PropTypes.string,
+      secondImage: PropTypes.string,
+    })
+  ),
+};
 
 export default Gallery;

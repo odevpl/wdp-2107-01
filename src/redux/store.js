@@ -8,7 +8,6 @@ import brandsReducer from './brandsRedux';
 import sizeReducer from './sizeRedux';
 import feedbackReducer from './feedbackRedux';
 import dealsReducer from './dealsRedux';
-import galleryReducer from './galleryRedux';
 
 // define reducers
 const reducers = {
@@ -19,7 +18,6 @@ const reducers = {
   size: sizeReducer,
   feedbacks: feedbackReducer,
   deals: dealsReducer,
-  gallery: galleryReducer,
 };
 
 // add blank reducers for initial state properties without reducers
