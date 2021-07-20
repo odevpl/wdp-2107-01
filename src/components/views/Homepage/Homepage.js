@@ -13,13 +13,13 @@ import Promoted from '../../common/Promoted/PromotedContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
+    <Promoted />
     <FeatureBoxes />
     <Deals />
     <NewFurniture />
     <ProductCompare />
-    <Feedback />
     <Brands />
-    <Promoted />
+    <Feedback />
   </div>
 );
 
