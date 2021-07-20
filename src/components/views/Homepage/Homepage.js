@@ -9,6 +9,7 @@ import ProductCompare from '../../features/ProductCompare/ProductCompareContaine
 import Feedback from '../../layout/Feedback/FeedbackContainer';
 import Deals from '../../layout/Deals/DealsContainer';
 import Brands from '../../layout/Brands/BrandsContainer';
+import Gallery from '../../layout/Gallery/GalleryContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -16,6 +17,7 @@ const Homepage = () => (
     <Deals />
     <NewFurniture />
     <ProductCompare />
+    <Gallery />
     <Feedback />
     <Brands />
   </div>
