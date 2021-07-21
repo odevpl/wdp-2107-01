@@ -5,7 +5,6 @@
   text-align: center;
   margin-top: 40px;
 
-
   .iconWrapper {
     height: 60px;
     transform: translateY(-50%);
@@ -13,7 +12,6 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
 
     .icon {
       position: relative;
@@ -54,9 +52,9 @@
     letter-spacing: 1px;
     font-weight: 300;
 
-  .link {
-    text-decoration: none;
-  }
+    .link {
+      text-decoration: none;
+    }
 
     h5 {
       font-weight: 600;
@@ -70,8 +68,6 @@
 
     .iconWrapper {
       color: $feature-box-color;
-
-
 
       &::after {
         background-color: $primary;

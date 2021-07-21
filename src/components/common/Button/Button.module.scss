@@ -30,16 +30,16 @@
 .outline {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid $dark-gray;
-  color: $dark-gray;
+  border: 1px solid $button-outline;
+  color: $button-outline;
   font-size: 13px;
   line-height: 22px;
 
   &:not(.noHover):hover {
-    background-color: $dark-gray;
-    color: $white;
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $button-text;
     cursor: pointer;
-    transition: background-color 0.5s ease-out;
     @extend %hoverEffects;
   }
 }

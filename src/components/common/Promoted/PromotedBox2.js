@@ -8,9 +8,7 @@ const PromotedBox2 = ({ image }) => (
     <div className={styles.photo}>
       <img className={styles.image} src={image} alt='Ups...'></img>
       <div className={styles.buttons}>
-        <Button className={styles.buttonCenter} variant='main'>
-          SHOP NOW
-        </Button>
+        <Button className={styles.buttonCenter}>SHOP NOW</Button>
       </div>
 
       <div className={styles.content}>

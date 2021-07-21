@@ -1,5 +1,5 @@
 @import "../../../styles/settings.scss";
-@import "../Button/Button.module.scss";
+// @import "../Button/Button.module.scss";
 
 .root {
   background-color: $white;
@@ -9,6 +9,15 @@
   .oldPrice {
     text-decoration: line-through;
     color: $red;
+  }
+
+  .price {
+    background-color: $dark-gray;
+    color: $white;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 5px 10px;
   }
 
   &:hover {
@@ -185,18 +194,12 @@
     align-items: center;
 
     a {
-      transition: color $transition-color, background-color $transition-bg-color, transform $transition-transform;
+      transition: $transition-color, background-color $transition-bg-color, transform $transition-transform;
 
       &:hover {
         color: $white !important;
-        background-color: $dark-gray;
-        // transform: translateY(0);
-        text-decoration: none;
+        background-color: $orange;
       }
     }
-  }
-
-  .price {
-    @extend .small;
   }
 }
