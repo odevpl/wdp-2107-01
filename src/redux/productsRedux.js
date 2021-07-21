@@ -15,6 +15,11 @@ export const getCountProductToCompare = ({ products }) => {
   return count;
 };
 
+export const getGalleryProducts = ({ products }) =>
+  products.filter(product => product.gallery === true);
+export const getSelectedProduct = ({ products }) =>
+  products.find(product => product.selected === true);
+
 /* action name creator */
 const reducerName = 'products';
 const createActionName = name => `app/${reducerName}/${name}`;

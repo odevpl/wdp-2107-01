@@ -22,6 +22,7 @@ $white7: rgb(224, 227, 237);
 $ivory: #b6b6b6;
 $black-transaprent: rgba(1, 2, 2, 0.2);
 $black-transaprent2: rgba(1, 2, 2, 0.3);
+$black-transaprent3: rgba(0, 0, 0, 0.4);
 $transparent: transparent;
 $darkGray:	#2a2a2a;
 $lightBlue-transparent: rgba(191, 198, 255, 0.25);
@@ -31,6 +32,7 @@ $black2: rgba(41, 41, 41, 0.8);
 $black3: rgba(0, 0, 0, 0.3);
 $red: #ff0000;
 
+$lightGreen: #7bb314;
 
 /* COMPONENT COLOURS - for use in other files */
 $form-border-color: $black;
@@ -68,6 +70,13 @@ $deals-shadowbox-color: $black-transaprent2;
 $product-box-color: $transparent;
 $product-box-border: $white2;
 $photo-color: $transparent;
+
+$gallery-box-border: $white2;
+$gallery-box-background: $white3;
+$gallery-box-shadow: $black-transaprent3;
+$gallery-rating-background: $white;
+$gallery-deal-color: $lightGreen;
+$gallery-text: $dark-gray;
 
 $sale-color: $white;
 $sale-background: $gray3;
