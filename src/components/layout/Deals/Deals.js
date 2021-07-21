@@ -9,8 +9,8 @@ class Deals extends React.Component {
     return (
       <div className={styles.root}>
         <div className='container'>
-          <div className='row align-items-center justify-content-center'>
-            <div className={`col-6 ${styles.section}`}>
+          <div className='row  align-items-center justify-content-center'>
+            <div className={`col-sm-12 col-md-6 ${styles.section}`}>
               <div className={`col-12 ${styles.mainDeal}`}>
                 <img src={mainDeal.firstImage} alt={mainDeal.name} />
                 <div className={`col-12 ${styles.shadowBox}`}>
@@ -28,7 +28,7 @@ class Deals extends React.Component {
                 </div>
               </div>
             </div>
-            <div className={`col-6 ${styles.section}`}>
+            <div className={`col-sm-12 col-md-6 ${styles.section}`}>
               <div className={`col-12 ${styles.deal}`}>
                 <div className={styles.topBox}>
                   <img
