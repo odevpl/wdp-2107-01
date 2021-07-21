@@ -19,61 +19,62 @@
   :global(.container) > :global(.row) {
     height: 84px;
   }
-
-  .menu {
-    display: flex;
-    align-self: stretch;
-
-    ul {
-      margin: 0;
-      padding: 0;
+  .wrapper {
+    align-items: center;
+    .menu {
       display: flex;
+      align-self: stretch;
 
-      li {
-        list-style: none;
+      ul {
+        margin: 0;
+        padding: 0;
         display: flex;
-        align-items: stretch;
+
+        li {
+          list-style: none;
+          display: flex;
+          align-items: stretch;
+        }
+      }
+
+      a {
+        color: $text-color;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 1rem;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        border-top: 4px solid $menu-link-border;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+        &:hover,
+        &.active {
+          background-color: $primary;
+          color: $menu-link-active;
+          border-color: $primary;
+        }
+
+        &:hover {
+          @extend %hoverEffects;
+        }
+
+        &.active {
+          border-color: $text-color;
+        }
       }
     }
 
-    a {
-      color: $text-color;
-      text-transform: uppercase;
-      font-size: 12px;
-      padding: 1rem;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      border-top: 4px solid $menu-link-border;
-      font-weight: 500;
-      letter-spacing: 1px;
-
-      &:hover,
-      &.active {
-        background-color: $primary;
-        color: $menu-link-active;
-        border-color: $primary;
-      }
-
-      &:hover {
-        @extend %hoverEffects;
-      }
-
-      &.active {
-        border-color: $text-color;
-      }
+    .dropdown {
+      display: none;
     }
-  }
-
-  .dropdown {
-    display: none;
   }
 }
 
 @media (max-width: 1200px) {
   .root {
     .menu {
-
       a {
         padding: 10px;
       }
@@ -86,35 +87,42 @@
     :global(.container) > :global(.row) {
       height: fit-content;
     }
+    .wrapper {
+      flex-direction: column;
+      align-items: initial;
+      margin: 0 auto;
+      padding-left: 5rem;
 
-     .search {
-      text-align: center;
+      .search {
       order: 2;
 
       form {
-        height: fit-content;
-        width: 469px;
+        width: 552px;
 
         div {
           width: 50%;
         }
       }
-    }
+      }
 
-    .menu {
-      order: 1;
-      width: 100%;
+      .menu {
+        order: 1;
+        width: 100%;
 
-      ul {
-        margin: 0 auto;
+        ul {
+          margin: 0 auto;
+        }
       }
     }
   }
 }
 
+@media (max-width: 893px) {
+
+}
+
 @media (max-width: 575px) {
   .root {
-
    .menu {
      visibility: hidden;
      position: absolute;

@@ -15,13 +15,15 @@ const MenuBar = ({ children }) => {
   return (
     <div className={styles.root}>
       <div className='container'>
-        <div className='row align-items-center'>
-          <div className={'col ' + styles.search}>
+        <div className={'row ' + styles.wrapper}>
+          <div className={'col-md-6 col-xs-12 ' + styles.search}>
             <ProductSearch />
           </div>
           <div
             className={
-              'col-auto ' + styles.menu + (open ? ' ' + styles.activeMenu : '')
+              'col-md-6 col-xs-12 ' +
+              styles.menu +
+              (open ? ' ' + styles.activeMenu : '')
             }
           >
             <ul>

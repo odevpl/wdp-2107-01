@@ -71,13 +71,14 @@ const ProductBox = ({
           </FontAwesomeIcon>
         </Button>
         <Button
+          className={compare ? styles.active : undefined}
+          variant='outline'
           onClick={event => {
             event.preventDefault();
             if (countProductToCompare() < 4) {
               addToCompare(id);
             }
           }}
-          variant={compare ? 'active' : 'outline'}
         >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
