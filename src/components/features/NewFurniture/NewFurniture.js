@@ -58,6 +58,7 @@ class NewFurniture extends React.Component {
       dots.push(
         <li key={i}>
           <Link
+            to='/#'
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
           >
