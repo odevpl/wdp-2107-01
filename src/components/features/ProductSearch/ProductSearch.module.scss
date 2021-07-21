@@ -14,10 +14,9 @@
 
 .root {
   border: 1px solid $form-border-color;
-  display: flex;
+  display: inline-flex;
   height: 45px;
   color: $text-color;
-  margin-right: 10%;
 
   .category {
     border-right: 1px solid $form-border-color;
@@ -25,7 +24,7 @@
     justify-content: center;
     position: relative;
     font-size: 14px;
-    width: 50%;
+    width: 15vw;
 
     ul {
       position: absolute;
@@ -33,9 +32,7 @@
       height: 100%;
       list-style: none;
       padding-left: 0;
-
       li {
-        display: block;
         padding-top: 12px;
         padding-left: 20%;
         display: none;
@@ -43,9 +40,6 @@
       }
       li:first-child {
         display: block;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
       }
     }
 
@@ -84,16 +78,12 @@
     align-items: center;
     position: relative;
     justify-content: space-between;
-    width: 48%;
 
     input {
       border: 0;
       padding-left: 10px;
       font-size: 14px;
       outline: none;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
 
       &::placeholder {
         color: $text-color;
@@ -157,33 +147,25 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .root {
-    margin-right: 15px;
-  }
-}
 
 @media (max-width: 483px) {
-  .root:hover {
-    .category {
-      border-right: 1px solid $primary;
-    }
-  }
-}
-
-@media (max-width: 324px) {
   .root {
     .category {
+      border-right: 0;
+    }
 
-      ul {
-        li {
-          width: 60px;
-        }
+    .searchField {
+      border-top: 1px solid $form-border-color;
+    }
+  }
 
-        li:first-child {
-          width: 100%;
-        }
-      }
+  .root:hover {
+    .category {
+      border-right: 0;
+    }
+
+    .searchField {
+      border-top: 1px solid $primary;
     }
   }
 }

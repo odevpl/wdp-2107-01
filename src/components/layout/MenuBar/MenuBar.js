@@ -15,11 +15,15 @@ const MenuBar = ({ children }) => {
   return (
     <div className={styles.root}>
       <div className='container'>
-        <div className={'row ' + styles.wrapper}>
+        <div className='row align-items-center'>
           <div className={'col ' + styles.search}>
             <ProductSearch />
           </div>
-          <div className={'col ' + styles.menu + (open ? ' ' + styles.activeMenu : '')}>
+          <div
+            className={
+              'col-auto ' + styles.menu + (open ? ' ' + styles.activeMenu : '')
+            }
+          >
             <ul>
               <li>
                 <Link to={'/'} className={styles.active}>
@@ -46,7 +50,11 @@ const MenuBar = ({ children }) => {
               </li>
             </ul>
           </div>
-          <a href='#' className={styles.dropdown} onClick={() => setOpen(!open)}>
+          <a
+            href='#'
+            className={'col ' + styles.dropdown}
+            onClick={() => setOpen(!open)}
+          >
             <FontAwesomeIcon icon={faBars} />
           </a>
         </div>
