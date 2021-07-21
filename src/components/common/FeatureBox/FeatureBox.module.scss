@@ -62,17 +62,15 @@
       font-weight: 600;
       margin: 0;
     }
-
-    p {
-    }
   }
 
   &.active:hover {
-    transform: scale(0.98);
     transition-duration: 1sg;
+    @extend %hoverEffects;
 
     .iconWrapper {
       color: $feature-box-color;
+
 
 
       &::after {

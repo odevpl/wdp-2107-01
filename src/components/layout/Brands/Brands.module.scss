@@ -1,0 +1,43 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 5rem 0;
+  text-align: center;
+
+  .brandsRow {
+    display: inline-flex;
+    padding: 24px 0;
+    border-top: 1px solid $header-topbar-bg;
+    border-bottom: 1px solid $header-topbar-bg;
+  }
+
+  .brandLogoImage {
+    border: 1px solid $header-topbar-bg;
+    margin: 0 10px;
+  }
+
+  .arrowShadow {
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    margin-left: 16px;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    background-color: $form-border-color;
+    display: flex;
+    align-items: center;
+  }
+
+  .leftArrow,
+  .rightArrow {
+    margin-left: -15px;
+    margin-right: 10px;
+    color: white;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

@@ -24,6 +24,7 @@ const ProductBox = ({
   compare,
   countProductToCompare,
   addToCompare,
+  toggleFavourite,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -57,7 +58,14 @@ const ProductBox = ({
     <div className={styles.line} />
     <div className={styles.actions}>
       <div className='outlines'>
-        <Button className={favourite ? styles.active : undefined} variant='outline'>
+        <Button
+          className={favourite ? styles.active : undefined}
+          variant='outline'
+          onClick={event => {
+            event.preventDefault();
+            toggleFavourite(id);
+          }}
+        >
           <FontAwesomeIcon icon={favourite ? farHeart : faHeart}>
             Favorite
           </FontAwesomeIcon>
@@ -97,6 +105,7 @@ ProductBox.propTypes = {
   oldPrice: PropTypes.number,
   addToCompare: PropTypes.func,
   countProductToCompare: PropTypes.func,
+  toggleFavourite: PropTypes.func,
 };
 
 export default ProductBox;
