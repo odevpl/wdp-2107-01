@@ -9,7 +9,7 @@ class Deals extends React.Component {
     return (
       <div className={styles.root}>
         <div className='container'>
-          <div className='row  align-items-center justify-content-center'>
+          <div className='row ml-sm-0 mr-sm-0 align-items-center justify-content-center'>
             <div className={`col-sm-12 col-md-6 ${styles.section}`}>
               <div className={`col-12 ${styles.mainDeal}`}>
                 <img src={mainDeal.firstImage} alt={mainDeal.name} />
