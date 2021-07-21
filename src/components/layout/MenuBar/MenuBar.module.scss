@@ -21,6 +21,7 @@
   }
   .wrapper {
     align-items: center;
+
     .menu {
       display: flex;
       align-self: stretch;
@@ -74,9 +75,11 @@
 
 @media (max-width: 1200px) {
   .root {
-    .menu {
-      a {
-        padding: 10px;
+    .wrapper {
+      .menu {
+        a {
+          padding: 10px;
+        }
       }
     }
   }
@@ -110,109 +113,115 @@
         width: 100%;
 
         ul {
-          margin: 0 auto;
+          margin: 0;
+        }
+
+        a {
+          padding: 1rem;
         }
       }
     }
   }
 }
 
-@media (max-width: 893px) {
+@media (max-width: 768px) {
+  .root {
+    .wrapper {
+      padding: 0;
 
+      .menu {
+        a {
+          padding: 10px;
+        }
+      }
+
+      .search {
+        form {
+          width: 469px;
+        }
+      }
+    }
+  }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 577px) {
   .root {
-   .menu {
-     visibility: hidden;
-     position: absolute;
-     right: 1.5rem;
-     z-index: 4;
+    .wrapper {
+      flex-direction: row;
+      position: relative;
 
-     ul {
-       flex-direction: column;
+      .menu {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 2rem;
+        z-index: 9;
 
-       li {
-         z-index: 1;
+        ul {
+          flex-direction: column;
 
-         a{
-           width: 100%;
-         }
-       }
-     }
+          li {
+            z-index: 1;
 
-     ul::before {
-      position: absolute;
-      content: ' ';
-      display: block;
-      width: 91px;
-      height: 100%;
-      background-color: $feature-box-background;
-      box-shadow: 1px 10px 10px 1px black;
-      z-index: 0;
-     }
-   }
+            a {
+              width: 100%;
+            }
+          }
+        }
 
-   .activeMenu {
-     visibility: visible;
-   }
+        ul::before {
+          position: absolute;
+          content: ' ';
+          display: block;
+          width: 91px;
+          height: 100%;
+          background-color: $feature-box-background;
+          box-shadow: 1px 10px 10px 1px black;
+          z-index: 0;
+        }
+      }
 
-   .search {
-      text-align: center;
-      width: fit-content;
+      .activeMenu {
+        visibility: visible;
+      }
 
-      form {
-        height: fit-content;
-        width: fit-content;
+      .search {
+        padding-left: 0;
+        padding-right: 10px;
 
-        div {
+        form {
           width: 100%;
         }
       }
-    }
 
-   .dropdown {
-     display: block;
-     text-align: end;
-     font-size: 1rem;
-     order: 2;
-     z-index: 4;
-   }
-  }
-}
-
-@media (max-width: 483px) {
-  .root {
-    .menu {
-
-      a {
-        border-right: 0;
+      .dropdown {
+        display: block;
+        font-size: 1rem;
+        width: fit-content;
+        order: 2;
+        z-index: 9;
+        padding-top: 10px;
       }
     }
-
-    .search {
-      width: 67%;
-
-       form {
-         flex-direction: column;
-         width: 100%;
-       }
-
-       div {
-         select {
-           width: 100%;
-           overflow: hidden;
-         }
-
-         input{
-           overflow: hidden;
-         }
-       }
-     }
-
-    .dropdown {
-      text-align: center;
-    }
   }
 }
 
+@media (max-width: 324px) {
+  .root {
+    .wrapper {
+      .search {
+        width: 86%;
+
+        form {
+          button {
+            padding-left: 0;
+          }
+
+          svg {
+            transform: scale(0.8);
+          }
+        }
+      }
+    }
+  }
+}
