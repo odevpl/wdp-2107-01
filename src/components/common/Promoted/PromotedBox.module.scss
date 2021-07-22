@@ -1,18 +1,17 @@
 @import "../../../styles/settings.scss";
-// @import "../Button/Button.module.scss";
 
 .root {
-  background-color: $white;
-  border: 1px solid $white2;
+  background-color: $promoted-background-color;
+  border: 1px solid $promoted-border-color;
 
   .oldPrice {
     text-decoration: line-through;
-    color: $black4;
+    color: $promoted-text-color;
   }
 
   .price {
-    background-color: $dark-gray;
-    color: $white;
+    background-color: $promoted-background-color2;
+    color: $promoted-text-color2;
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
@@ -42,7 +41,7 @@
     position: relative;
     padding: 80% 10px 0 10px;
     background: {
-      color: $white3;
+      color: $promoted-text-color3;
       size: contain;
       position: center;
       repeat: no-repeat;
@@ -71,7 +70,7 @@
             width: 13px;
             height: 13px;
             border-radius: 6px;
-            background-color: $white2;
+            background-color: $promoted-background-color3;
             font-size: 0;
 
             &.active,
@@ -91,8 +90,8 @@
       text-align: left;
       font-weight: 600;
       transform: translateX(-50%);
-      background-color: $gray-9;
-      color: $white;
+      background-color: $promoted-background-color4;
+      color: $promoted-text-color2;
       padding: 30px 15px 5px 15px;
       z-index: 99999;
     }
@@ -130,16 +129,16 @@
     .stars {
       a {
         text-decoration: none;
-        color: $gray2;
+        color: $promoted-text-color4;
       }
     }
 
     .sale {
       display: none;
       position: absolute;
-      background-color: $black2;
+      background-color: $promoted-background-color5;
       border-radius: 50%;
-      color: $white;
+      color: $promoted-text-color2;
       width: 65px;
       height: 65px;
       z-index: 99999;
@@ -181,7 +180,7 @@
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid $dark-gray;
+    border-bottom: 1px solid $promoted-border-color2;
     position: relative;
 
     &::before {
@@ -205,8 +204,8 @@
       transition: $transition-color, background-color $transition-bg-color, transform $transition-transform;
 
       &:hover {
-        color: $white !important;
-        background-color: $orange;
+        color: $promoted-text-color2 !important;
+        background-color: $primary;
       }
     }
   }

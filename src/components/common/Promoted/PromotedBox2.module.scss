@@ -2,8 +2,8 @@
 @import "../Button/Button.module.scss";
 
 .root {
-  background-color: $white;
-  border: 1px solid $white2;
+  background-color: $promoted-background-color;
+  border: 1px solid $promoted-border-color;
   margin-bottom: 2rem;
   height: 10px;
 
@@ -11,7 +11,7 @@
     position: relative;
     padding: 60% 10px 0 10px;
     background: {
-      color: $white3;
+      color: $promoted-text-color3;
       size: contain;
       position: center;
       repeat: no-repeat;
@@ -37,8 +37,8 @@
     .buttonCenter {
       justify-content: space-between;
       position: absolute;
-      background-color: $white;
-      color: $gray-9;
+      background-color: $promoted-background-color;
+      color: $promoted-text-color5;
       width: 150px;
       z-index: 999;
       font-size: 16px;
@@ -56,10 +56,10 @@
     width: 100%;
     top: 23%;
     left: 0;
-    background-color: $black3;
+    background-color: $promoted-background-color6;
 
     h1 {
-      color: $white;
+      color: $promoted-text-color2;
       letter-spacing: 1px;
       font-weight: 300;
 
@@ -69,7 +69,7 @@
     }
 
     p {
-      color: $white;
+      color: $promoted-text-color2;
       line-height: 24px;
       letter-spacing: 1px;
       font-weight: 300;
@@ -88,9 +88,9 @@
       bottom: 0;
 
       &:hover {
-        background-color: $orange;
+        background-color: $primary;
         text-decoration: none;
-        color: $white;
+        color: $promoted-text-color2;
       }
     }
 
@@ -100,9 +100,9 @@
       bottom: 0;
 
       &:hover {
-        background-color: $orange;
+        background-color: $primary;
         text-decoration: none;
-        color: $white;
+        color: $promoted-text-color2;
       }
     }
   }

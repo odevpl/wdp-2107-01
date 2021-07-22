@@ -109,11 +109,10 @@ $box-shadow: $black-transaprent;
 
 $list-link: $white;
 
-/* Paddings */
+/* PADDINGS */
 $base-padding: 24px;
 
 /* HOVER EFFECTS */
-
 %hoverEffects {
   transition: 2500ms;
   transform: translate(0px, -10px);
@@ -123,3 +122,20 @@ $base-padding: 24px;
 $transition-color: 250ms;
 $transition-bg-color: 250ms;
 $transition-transform: 250ms;
+
+/* PROMOTED */
+$promoted-background-color: $white;
+$promoted-background-color2: $dark-gray;
+$promoted-background-color3: $white2;
+$promoted-background-color4: $gray-9;
+$promoted-background-color5: $black2;
+$promoted-background-color6: $black3;
+
+$promoted-border-color: $white2;
+$promoted-border-color2: $dark-gray;
+
+$promoted-text-color: $black4;
+$promoted-text-color2: $white;
+$promoted-text-color3: $white3;
+$promoted-text-color4: $gray2;
+$promoted-text-color5: $gray-9;
