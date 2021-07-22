@@ -3,6 +3,7 @@
 .root {
   padding: 5rem 0;
   text-align: center;
+  position: relative;
 
   .brandsRow {
     display: inline-flex;
@@ -14,6 +15,7 @@
   .brandLogoImage {
     border: 1px solid $header-topbar-bg;
     margin: 0 10px;
+
   }
 
   .arrowShadow {

@@ -1,5 +1,5 @@
 /* selectors */
-
+export const getSize = ({ size }) => size;
 /* action name creator */
 const reducerName = 'size';
 const createActionName = name => `app/${reducerName}/${name}`;
