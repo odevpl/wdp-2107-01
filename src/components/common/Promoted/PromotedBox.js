@@ -23,7 +23,7 @@ class PromotedBox extends React.Component {
   };
 
   state = {
-    activePage: 2,
+    activePage: 0,
   };
 
   render() {
@@ -98,13 +98,17 @@ class PromotedBox extends React.Component {
               <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
             </Button>
           </div>
-          <div className={styles.price}>
-            <Button noHover variant='small'>
+          <div className={styles.prices}>
+            <div className={styles.empty}>
               {this.props.oldPrice !== 0 && (
-                <span className={styles.oldPrice}>$ {this.props.oldPrice} </span>
+                <span className={styles.oldPrice}> {this.props.oldPrice} </span>
               )}
-              $ {this.props.price}
-            </Button>
+            </div>
+            <div className={styles.price}>
+              <Button noHover variant='small'>
+                $ {this.props.price}
+              </Button>
+            </div>
           </div>
         </div>
       </div>
