@@ -3,10 +3,6 @@ import React from 'react';
 import styles from './Brands.module.scss';
 
 class Brands extends React.Component {
-  state = {
-    width: 6,
-  };
-
   render() {
     return (
       <div className={styles.root}>
