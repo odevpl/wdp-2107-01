@@ -45,6 +45,10 @@ const initialState = {
   ],
   brands: [
     {
+      brandLogoImage: '/images/brands-logo/logo-9/logo-9.jpg',
+      id: 0,
+    },
+    {
       brandLogoImage: '/images/brands-logo/logo-1/logo-1.jpg',
       id: 1,
     },
@@ -75,10 +79,6 @@ const initialState = {
     {
       brandLogoImage: '/images/brands-logo/logo-8/logo-8.jpg',
       id: 8,
-    },
-    {
-      brandLogoImage: '/images/brands-logo/logo-9/logo-9.jpg',
-      id: 9,
     },
   ],
   products: [
