@@ -61,9 +61,9 @@ class Feedback extends React.Component {
     return (
       <div className={styles.root}>
         <div className='container'>
-          <div className={styles.feedbackBar}>
+          <div className={styles.panelBar}>
             <div className='row no-gutters align-items-end'>
-              <div className={'col-auto ' + styles.feedbackHeading}>
+              <div className={'col-auto ' + styles.heading}>
                 <h3>Client Feedback</h3>
               </div>
               <div className={'col ' + styles.menu} />
@@ -81,16 +81,21 @@ class Feedback extends React.Component {
               }
             >
               {feedbacks.slice(activePage * 1, (activePage + 1) * 1).map(feedback => (
-                <div className={styles.feedbackBox} key={feedback.id}>
+                <div key={feedback.id}>
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faQuoteRight} />
                   </div>
                   <div className={styles.opinion}>{feedback.opinion}</div>
-                  <div className={styles.imageBox}>
-                    <div className={styles.client_image}>
-                      <img src={feedback.client_image} alt='' />
+                  <div className={'flex-column' + styles.clientsData}>
+                    <img
+                      className={styles.client_image}
+                      src={feedback.client_image}
+                      alt=''
+                    />
+                    <div className={styles.client_nameAndType}>
+                      {feedback.client_type}
+                      <div className={styles.client_name}>{feedback.client_name}</div>
                     </div>
-                    <div className={styles.client_name}>{feedback.client_name}</div>
                   </div>
                 </div>
               ))}
