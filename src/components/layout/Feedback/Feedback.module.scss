@@ -1,22 +1,18 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  .panelBar {
-    margin: 60px 0 30px 0;
+  .feedbackBar {
+    margin-bottom: 30px;
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid $white4;
-    }
-    .headingEmpty {
-      border-bottom: 4px solid $white4;
-      width: 888px;
+      border-bottom: 4px solid $white2;
     }
 
-    .heading {
+    .feedbackHeading {
       position: relative;
 
-      .title {
+      h3 {
         color: $primary;
         text-transform: uppercase;
         font-size: 20px;
@@ -35,6 +31,19 @@
       }
     }
 
+    .menu {
+      text-align: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        border-bottom: 4px solid #e1e1e1;
+      }
+    }
+
     .dots {
       position: absolute;
       right: 0;
@@ -46,21 +55,19 @@
         list-style: none;
         background-color: $white;
         transform: translateY(15px);
-        width: 100px;
 
         li {
-          display: inline-flex;
+          display: inline-block;
           margin-left: 0.5rem;
 
-          a {
+          //noinspection ALL
+          div {
             display: block;
             width: 13px;
             height: 13px;
             border-radius: 6px;
-            background-color: $white2;
+            background-color: #e1e1e1;
             font-size: 0;
-            margin-right: 8px;
-            margin-top: 20px;
 
             &.active,
             &:hover {
@@ -72,41 +79,80 @@
     }
   }
 
-  .icon {
-    font-size: 30px;
-    text-align: center;
-    height: 60px;
+  .feedbackLine {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+
+    .feedbackBox {
+      display: flex;
+      padding: 10px 50px 25px 50px;
+      margin: 20px 50px 50px 50px;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 55%;
+
+      .icon {
+        height: 25px;
+        width: 25px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+        .img {
+          object-fit: cover;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+
+      .opinion {
+        font-style: italic;
+        font-size: 14px;
+        text-align: center;
+        padding: 0 120px;
+        margin-bottom: 24px;
+      }
+
+      .client_name {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        margin-top: 25px;
+
+
+        .imageBox {
+          height: 130px;
+          width: 130px;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          margin-right: 30px;
+
+          .client_image {
+            object-fit: cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
   }
 
-  .opinion {
-    font-size: 14px;
-    text-align: center;
-    padding: 0 120px;
-    margin-bottom: 24px;
+
+  .fadeout {
+    opacity: 0;
+    transition: 0.5s;
   }
 
-  .clientsData {
-    margin: 0 0 80px 460px;
-    display: inline-flex;
-  }
-
-  .client_image {
-    width: 80px;
-    height: 80px;
-    border-radius: 5px;
-  }
-
-  .client_nameAndType {
-    margin-left: 12px;
-    text-align: center;
-  }
-
-  .client_name {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-
-  .client_type {
-    margin-top: 10px;
+  .fadein {
+    transition: 0.5s;
   }
 }
+

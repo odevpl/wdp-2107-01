@@ -58,33 +58,33 @@ class NewFurniture extends React.Component {
     }
 
     return (
-      <Swipeable leftAction={leftAction} rightAction={rightAction}>
-        <div className={styles.root}>
-          <div className='container'>
-            <div className={styles.panelBar}>
-              <div className='row no-gutters align-items-end'>
-                <div className={'col-auto ' + styles.heading}>
-                  <h3>New furniture</h3>
-                </div>
-                <div className={'col ' + styles.menu}>
-                  <ul>
-                    {categories.map(item => (
-                      <li key={item.id}>
-                        <a
-                          className={item.id === activeCategory && styles.active}
-                          onClick={() => this.handleCategoryChange(item.id)}
-                        >
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className={'col-auto ' + styles.dots}>
-                  <ul>{dots}</ul>
-                </div>
+      <div className={styles.root}>
+        <div className='container'>
+          <div className={styles.panelBar}>
+            <div className='row no-gutters align-items-end'>
+              <div className={'col-auto ' + styles.heading}>
+                <h3>New furniture</h3>
+              </div>
+              <div className={'col ' + styles.menu}>
+                <ul>
+                  {categories.map(item => (
+                    <li key={item.id}>
+                      <a
+                        className={item.id === activeCategory && styles.active}
+                        onClick={() => this.handleCategoryChange(item.id)}
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={'col-auto ' + styles.dots}>
+                <ul>{dots}</ul>
               </div>
             </div>
+          </div>
+          <Swipeable leftAction={leftAction} rightAction={rightAction}>
             <div className='row'>
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
@@ -94,9 +94,9 @@ class NewFurniture extends React.Component {
                   </div>
                 ))}
             </div>
-          </div>
+          </Swipeable>
         </div>
-      </Swipeable>
+      </div>
     );
   }
 }

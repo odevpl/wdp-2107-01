@@ -74,6 +74,7 @@
     "lint-staged": "^9.4.0",
     "onchange": "^6.1.0",
     "prettier": "^1.19.1",
+    "react-elastic-carousel": "^0.11.5",
     "redux-devtools-extension": "^2.13.8"
   }
 }
