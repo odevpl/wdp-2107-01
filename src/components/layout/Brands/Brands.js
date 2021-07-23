@@ -8,16 +8,60 @@ class Brands extends React.Component {
   state = {
     imgNumber: 6,
     counter: 0,
+    direction: 'init',
   };
 
-  // sliceArray(brands, size) {
-  //   const currentLastImg = this.findLastIndex();
-  //   const leftToDisplay = brands.length-currentLastImg;
-  //   // if (leftToDisplay < size) {
-  //   // }
-  //   const array = brands.slice(currentLastImg, currentLastImg+size);
-  //   return array;
-  // }
+  setDirection(direction) {
+    this.setState({ direction: direction });
+  }
+
+  duplicateArray(brands, size) {
+    // /* eslint-disable */
+    // debugger;
+    let final = [];
+    if (size > brands) {
+      const first = brands;
+      const second = [];
+      for (let brand of brands) {
+        second.push({
+          brandLogoImage: brand.brandLogoImage,
+          id: brand.id + brands.length,
+        });
+      }
+      final = first.concat(second);
+    } else {
+      final = brands;
+    }
+
+    return final;
+  }
+
+  displayBrands(brands, size) {
+    const direction = this.state.direction;
+    const readyArray = this.cutDoubleArray(brands, size, direction);
+    return readyArray.map(brand => (
+      <img
+        id='brand'
+        key={brand.brandLogoImage}
+        src={brand.brandLogoImage}
+        alt={brand.id}
+        className={styles.brandLogoImage}
+      />
+    ));
+  }
+
+  cutDoubleArray(doubleArray, size, direction = 'init') {
+    let readyArray = [];
+    const numberOfPictures = this.calculateNumberOfPictures(size);
+    const keyInArray = this.findKey(doubleArray);
+    if (direction === 'right' || direction === 'init') {
+      readyArray = doubleArray.slice(keyInArray, keyInArray + numberOfPictures);
+    } else {
+      readyArray = doubleArray.slice(keyInArray - numberOfPictures, keyInArray);
+    }
+
+    return readyArray;
+  }
 
   calculateNumberOfPictures(size) {
     let imgNumber;
@@ -37,13 +81,21 @@ class Brands extends React.Component {
       default:
         imgNumber = 'error';
     }
-
     return imgNumber;
   }
 
+  findKey(array) {
+    let currentKey;
+    const lastIndex = this.findLastIndex();
+    for (let key = 0; key < array.length; key++) {
+      if (array[key].id === parseInt(lastIndex)) {
+        currentKey = key;
+      }
+    }
+    return currentKey;
+  }
+
   findLastIndex() {
-    // /* eslint-disable */
-    // debugger;
     const elements = document.querySelectorAll('#brand');
     const lastChild = elements[elements.length - 1];
     let lastIndex;
@@ -56,61 +108,6 @@ class Brands extends React.Component {
     return lastIndex;
   }
 
-  findKey(array) {
-    let currentKey;
-    const lastIndex = this.findLastIndex();
-    for (let key = 0; key < array.length; key++) {
-      if (array[key].id === parseInt(lastIndex)) {
-        currentKey = key;
-      }
-      console.log(array[key]);
-    }
-    return currentKey;
-  }
-
-  duplicateArray(brands, size) {
-    const first = brands;
-    const second = [];
-    let final = [];
-    for (let brand of brands) {
-      second.push({
-        brandLogoImage: brand.brandLogoImage,
-        id: brand.id + brands.length,
-      });
-    }
-    final = first.concat(second);
-    return final;
-  }
-
-  // cutArraytoSize(array, size) {
-  //   const length = this.calculateNumberOfPictures({size});
-  //   const lastPhoto = this.findLastIndex();
-
-  // }
-
-  cutDoubleArray(doubleArray, size, direction = 'left') {
-    const numberOfPictures = this.calculateNumberOfPictures(size);
-    const keyInArray = this.findKey(doubleArray);
-    let readyArray = doubleArray.slice(keyInArray, keyInArray + numberOfPictures);
-    // za duzo razy sie updateuje  - dispatch it and bring back as brands
-    return readyArray;
-  }
-
-  displayBrands(brands, size) {
-    const readyArray = this.cutDoubleArray(brands, size);
-    return readyArray.map(brand => (
-      <img
-        id='brand'
-        key={brand.brandLogoImage}
-        src={brand.brandLogoImage}
-        alt={brand.id}
-        className={styles.brandLogoImage}
-      />
-    ));
-  }
-
-  arrowClick(brands, size, direction) {}
-
   render() {
     const { brands, size, updateBrands } = this.props;
     return (
@@ -120,13 +117,10 @@ class Brands extends React.Component {
             <div className={styles.brandsRow}>
               <div
                 className={styles.arrowLeft}
-                onClick={() =>
-                  this.arrowClick(
-                    updateBrands(this.duplicateArray(brands)),
-                    size,
-                    'left'
-                  )
-                }
+                onClick={() => {
+                  updateBrands(this.duplicateArray(brands, size));
+                  this.setDirection('left');
+                }}
               >
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
@@ -139,13 +133,7 @@ class Brands extends React.Component {
               </div>
               <div
                 className={styles.arrowRight}
-                onClick={() =>
-                  this.arrowClick(
-                    updateBrands(this.duplicateArray(brands)),
-                    size,
-                    'right'
-                  )
-                }
+                onClick={() => updateBrands(this.duplicateArray(brands, size))}
               >
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
