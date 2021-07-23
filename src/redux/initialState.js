@@ -61,6 +61,15 @@ const initialState = {
     {
       brandLogoImage: '/images/brands-logo/logo-6/logo-6.jpg',
     },
+    {
+      brandLogoImage: '/images/brands-logo/logo-7/logo-7.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/logo-8/logo-8.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/logo-9/logo-9.jpg',
+    },
   ],
   products: [
     {
