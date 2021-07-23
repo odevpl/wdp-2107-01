@@ -9,3 +9,52 @@ body {
 
 
 
+@import "./settings.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.switch-wrapper {
+  position: relative;
+
+  > :first-child ~ * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.fadein{
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+}
+
+.fadeout{
+  -webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeout 2s; /* Firefox < 16 */
+   -ms-animation: fadeout 2s; /* Internet Explorer */
+    -o-animation: fadeout 2s; /* Opera < 12.1 */
+       animation: fadeout 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
