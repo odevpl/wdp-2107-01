@@ -4,15 +4,15 @@
 // }
 
 .main {
-  background-color:$button-background;
-  color:$button-text;
+  background-color: $button-background;
+  color: $button-color;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
 
   &:not(.noHover):hover {
-    color: $button-text !important;
+    color: $button-color !important;
     background-color: $primary;
     text-decoration: none;
     @extend %hoverEffects;
@@ -30,15 +30,39 @@
 .outline {
   display: inline-block;
   padding: 5px 10px;
+  margin-left: 2px;
   border: 1px solid $button-outline;
   color: $button-outline;
   font-size: 13px;
   line-height: 22px;
 
   &:not(.noHover):hover {
-    background-color: $button-outline;
+    background-color: $primary;
+    border: 1px solid $primary;
     color: $button-text;
     cursor: pointer;
     @extend %hoverEffects;
   }
+}
+
+.buttonLeft {
+  background-color: $button-background;
+  color: $button-color;
+  font-size: 28px;
+  line-height: 24px;
+  padding: 8px 30px;
+  width: 50%;
+  z-index: 99999;
+  text-align: center;
+}
+
+.buttonRight {
+  background-color: $button-background;
+  color: $button-color;
+  font-size: 28px;
+  line-height: 24px;
+  padding: 8px 30px;
+  width: 50%;
+  z-index: 99999;
+  text-align: center;
 }

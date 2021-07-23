@@ -28,6 +28,10 @@ $darkGray:	#2a2a2a;
 $lightBlue-transparent: rgba(191, 198, 255, 0.25);
 $lightPink-transparent: rgba(252, 220, 255, 0.25);
 $black: #292929;
+$black2: rgba(41, 41, 41, 0.8);
+$black3: rgba(0, 0, 0, 0.3);
+$black4: #333232b9;
+$red: #ff0000;
 $lightGreen: #7bb314;
 
 /* COMPONENT COLOURS - for use in other files */
@@ -105,12 +109,33 @@ $box-shadow: $black-transaprent;
 
 $list-link: $white;
 
-/* Paddings */
+/* PADDINGS */
 $base-padding: 24px;
 
 /* HOVER EFFECTS */
-
 %hoverEffects {
   transition: 2500ms;
   transform: translate(0px, -10px);
 }
+
+/* TRANSITION FOR ALL */
+$transition-color: 250ms;
+$transition-bg-color: 250ms;
+$transition-transform: 250ms;
+
+/* PROMOTED */
+$promoted-background-color: $white;
+$promoted-background-color2: $dark-gray;
+$promoted-background-color3: $white2;
+$promoted-background-color4: $gray-9;
+$promoted-background-color5: $black2;
+$promoted-background-color6: $black3;
+
+$promoted-border-color: $white2;
+$promoted-border-color2: $dark-gray;
+
+$promoted-text-color: $black4;
+$promoted-text-color2: $white;
+$promoted-text-color3: $white3;
+$promoted-text-color4: $gray2;
+$promoted-text-color5: $gray-9;
