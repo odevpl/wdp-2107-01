@@ -10,8 +10,17 @@ class Brands extends React.Component {
     counter: 0,
   };
 
-  calculateParamsForSlice(size) {
-    let imgNumber = 1;
+  // sliceArray(brands, size) {
+  //   const currentLastImg = this.findLastIndex();
+  //   const leftToDisplay = brands.length-currentLastImg;
+  //   // if (leftToDisplay < size) {
+  //   // }
+  //   const array = brands.slice(currentLastImg, currentLastImg+size);
+  //   return array;
+  // }
+
+  calculateNumberOfPictures(size) {
+    let imgNumber;
     switch (size) {
       case 'lg':
         imgNumber = 6;
@@ -26,27 +35,74 @@ class Brands extends React.Component {
         imgNumber = 2;
         break;
       default:
-        imgNumber = 1;
+        imgNumber = 'error';
     }
 
     return imgNumber;
   }
 
-  sliceArray(brands, size) {
-    const array = brands.slice(this.state.counter, this.calculateParamsForSlice(size));
-    return array;
+  findLastIndex() {
+    // /* eslint-disable */
+    // debugger;
+    const elements = document.querySelectorAll('#brand');
+    const lastChild = elements[elements.length - 1];
+    let lastIndex;
+
+    if (lastChild) {
+      lastIndex = lastChild.getAttribute('alt');
+    } else {
+      lastIndex = 0;
+    }
+    return lastIndex;
+  }
+
+  duplicateArray(brands) {
+    const first = brands;
+    const second = [];
+    let final = [];
+    for (let brand of brands) {
+      second.push({
+        brandLogoImage: brand.brandLogoImage,
+        id: brand.id + brands.length,
+      });
+    }
+    final = first.concat(second);
+    return final;
+  }
+
+  cutDoubleArray(doubleArray, size, direction = 'left') {
+    const numberOfPictures = this.calculateNumberOfPictures(size);
+    let lastDisplayedPhoto = this.findLastIndex();
+    if (direction === 'right') {
+      lastDisplayedPhoto = -numberOfPictures;
+    }
+    let readyArray = doubleArray.slice(
+      lastDisplayedPhoto,
+      lastDisplayedPhoto + numberOfPictures
+    );
+    console.log(lastDisplayedPhoto);
+    return readyArray;
   }
 
   displayBrands(brands, size) {
-    const array = this.sliceArray(brands, size);
-    return array.map(brand => (
+    // /* eslint-disable */
+    // debugger;
+    const doubleArray = this.duplicateArray(brands);
+    const readyArray = this.cutDoubleArray(doubleArray, size);
+    return readyArray.map(brand => (
       <img
+        id='brand'
         key={brand.brandLogoImage}
         src={brand.brandLogoImage}
-        alt={'brand'}
+        alt={brand.id}
         className={styles.brandLogoImage}
       />
     ));
+  }
+
+  arrowClick(direction) {
+    const lastChild = this.findLastIndex();
+    console.log(lastChild, direction);
   }
 
   render() {
@@ -56,7 +112,7 @@ class Brands extends React.Component {
         <div className='container'>
           <div className='col'>
             <div className={styles.brandsRow}>
-              <div className={styles.arrowLeft}>
+              <div className={styles.arrowLeft} onClick={() => this.arrowClick('left')}>
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
                   icon={faChevronLeft}
@@ -66,7 +122,10 @@ class Brands extends React.Component {
               <div className={`slide ${styles.brandsImages}`}>
                 {this.displayBrands(brands, size)}
               </div>
-              <div className={styles.arrowRight}>
+              <div
+                className={styles.arrowRight}
+                onClick={() => this.arrowClick('right')}
+              >
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
                   icon={faChevronRight}
