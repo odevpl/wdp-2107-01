@@ -24,11 +24,21 @@ class PromotedBox extends React.Component {
 
   state = {
     activePage: 0,
+    fade: 'fadein',
   };
+
+  setUpdate() {
+    setTimeout(() => {
+      this.setState({ fade: 'fadeout' });
+    }, 2500);
+  }
 
   render() {
     const { activePage } = this.state;
+    const { fade } = this.state;
     const dots = [];
+    this.setUpdate();
+
     for (let i = 0; i < 3; i++) {
       dots.push(
         <li>
@@ -44,7 +54,11 @@ class PromotedBox extends React.Component {
           <div className={'col-auto ' + styles.dots}>
             <ul>{dots}</ul>
           </div>
-          <img className={styles.imageLeft} src={this.props.image} alt='Ups...'></img>
+          <img
+            className={`${fade} ${styles.imageLeft}`}
+            src={this.props.image}
+            alt='Ups...'
+          ></img>
           <div className={styles.buttons}>
             <Button variant='small'>
               <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART

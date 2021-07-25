@@ -6,26 +6,41 @@ import PromotedBox2 from '../../common/Promoted/PromotedBox2';
 import Button from '../Button/Button';
 
 class Promoted extends React.Component {
-  state = {
-    productHotDealsLeft: 7,
-    productHotDealsRight: 6,
-    fade: 'fadein',
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      productHotDealsLeft: 0,
+      productHotDealsRight: 1,
+      fade: 'fadein',
+    };
+  }
 
-  // componentDidMount(){
-  //   setTimeout(() => {
-  //     this.setState({productHotDealsLeft: })
-  //   },3000);
-  // }
+  componentDidUpdate() {
+    const maxPic = this.props.products.length - 1;
+    let number = this.state.productHotDealsLeft;
+    if (number === maxPic) {
+      number = 1;
+    }
+    setTimeout(() => {
+      this.setState({ productHotDealsLeft: number + 1 });
+    }, 3000);
+  }
+
+  checkPicLength() {}
 
   changePic(e, value, direction) {
     e.preventDefault();
     this.setState({ fade: 'fadeout' });
     let number = parseInt(value);
-    setTimeout(() => {
-      this.setState({ productHotDealsRight: number + direction });
-      this.setState({ fade: 'fadein' });
-    }, 500);
+    const firstPic = 0;
+    const lastPic = this.props.products.length - 1;
+    const nextPic = number + direction;
+    if (nextPic > 0 && nextPic < lastPic) {
+      setTimeout(() => {
+        this.setState({ productHotDealsRight: number + direction });
+        this.setState({ fade: 'fadein' });
+      }, 500);
+    }
   }
 
   render() {
