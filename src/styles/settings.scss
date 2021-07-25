@@ -4,7 +4,7 @@ $ligh-gray2: rgb(169, 169, 169);
 $gray: #363636;
 $gray2: rgb(42, 42, 42);
 $gray3: #292929;
-$gray-4:	#d8d8d8;
+$gray-4: #d8d8d8;
 $gray-5:	#b6b6b6;
 $gray-6:	#a9a9a9;
 $gray-7:	#434343;
@@ -21,11 +21,25 @@ $white6: rgb(216, 216, 216);
 $white7: rgb(224, 227, 237);
 $ivory: #b6b6b6;
 $black-transaprent: rgba(1, 2, 2, 0.2);
+$black-transaprent2: rgba(1, 2, 2, 0.3);
+$black-transaprent3: rgba(0, 0, 0, 0.4);
 $transparent: transparent;
 $darkGray:	#2a2a2a;
+
 $darkOrange:	#d58e32;
 
+$lightBlue-transparent: rgba(191, 198, 255, 0.25);
+$lightPink-transparent: rgba(252, 220, 255, 0.25);
+$black: #292929;
+$black2: rgba(41, 41, 41, 0.8);
+$black3: rgba(0, 0, 0, 0.3);
+$black4: #333232b9;
+$red: #ff0000;
+$lightGreen: #7bb314;
+
+
 /* COMPONENT COLOURS - for use in other files */
+$form-border-color: $black;
 
 $header-topbar-bg: $light-gray;
 $header-bg: $gray;
@@ -53,13 +67,22 @@ $feature-border-color:	$gray-5;
 $feature-dots-color:	$gray3;
 $feature-bg:	$white;
 
+$deals-topbox-background: $lightBlue-transparent;
+$deals-bottombox-background: $lightPink-transparent;
+$deals-shadowbox-color: $black-transaprent2;
+
 $product-box-color: $transparent;
 $productbox-stars-color:	$darkGray;
 $productbox-customStars-color: $darkOrange;
 $product-box-border: $white2;
 $photo-color: $transparent;
 
-
+$gallery-box-border: $white2;
+$gallery-box-background: $white3;
+$gallery-box-shadow: $black-transaprent3;
+$gallery-rating-background: $white;
+$gallery-deal-color: $lightGreen;
+$gallery-text: $dark-gray;
 
 $sale-color: $white;
 $sale-background: $gray3;
@@ -92,12 +115,33 @@ $box-shadow: $black-transaprent;
 
 $list-link: $white;
 
-/* Paddings */
+/* PADDINGS */
 $base-padding: 24px;
 
 /* HOVER EFFECTS */
-
 %hoverEffects {
   transition: 2500ms;
   transform: translate(0px, -10px);
 }
+
+/* TRANSITION FOR ALL */
+$transition-color: 250ms;
+$transition-bg-color: 250ms;
+$transition-transform: 250ms;
+
+/* PROMOTED */
+$promoted-background-color: $white;
+$promoted-background-color2: $dark-gray;
+$promoted-background-color3: $white2;
+$promoted-background-color4: $gray-9;
+$promoted-background-color5: $black2;
+$promoted-background-color6: $black3;
+
+$promoted-border-color: $white2;
+$promoted-border-color2: $dark-gray;
+
+$promoted-text-color: $black4;
+$promoted-text-color2: $white;
+$promoted-text-color3: $white3;
+$promoted-text-color4: $gray2;
+$promoted-text-color5: $gray-9;

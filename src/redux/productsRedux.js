@@ -15,6 +15,11 @@ export const getCountProductToCompare = ({ products }) => {
   return count;
 };
 
+export const getGalleryProducts = ({ products }) =>
+  products.filter(product => product.gallery === true);
+export const getSelectedProduct = ({ products }) =>
+  products.find(product => product.selected === true);
+
 /* action name creator */
 const reducerName = 'products';
 const createActionName = name => `app/${reducerName}/${name}`;
@@ -22,12 +27,20 @@ const createActionName = name => `app/${reducerName}/${name}`;
 /* action type */
 export const ADD_TO_COMPARE = createActionName('ADD_TO_COMPARE');
 export const REMOVE_FROM_COMPARE = createActionName('REMOVE_FROM_COMPARE');
+
 export const SET_CUSTOM_STARS = createActionName('SET_CUSTOM_STARS');
+
+export const TOGGLE_FAVOURITE = createActionName('TOGGLE_FAVOURITE');
+
 
 /* action creator */
 export const addToCompare = payload => ({ payload, type: ADD_TO_COMPARE });
 export const removeFromCompare = payload => ({ payload, type: REMOVE_FROM_COMPARE });
+
 export const setCustomStars = payload => ({ payload, type: SET_CUSTOM_STARS });
+
+export const toggleFavourite = payload => ({ payload, type: TOGGLE_FAVOURITE });
+
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
@@ -45,6 +58,13 @@ export default function reducer(statePart = [], action = {}) {
     case REMOVE_FROM_COMPARE: {
       return statePart.map(product =>
         product.id === action.payload ? { ...product, compare: false } : product
+      );
+    }
+    case TOGGLE_FAVOURITE: {
+      return statePart.map(product =>
+        product.id === action.payload
+          ? { ...product, favourite: !product.favourite }
+          : product
       );
     }
     default:

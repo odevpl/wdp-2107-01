@@ -18,10 +18,16 @@ const ProductBox = ({
   id,
   favorite,
   compare,
+
   handlePopupClick,
   handleFavoriteClick,
   handleCompareClick,
   handleAddClick,
+
+  countProductToCompare,
+  addToCompare,
+  toggleFavourite,
+
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -46,6 +52,7 @@ const ProductBox = ({
     </div>
     <div className={styles.line} />
     <div className={styles.actions}>
+
       <div className={styles.outlines}>
         <Button
           className={favorite ? styles.selected : styles.state}
@@ -58,6 +65,30 @@ const ProductBox = ({
           className={compare ? styles.selected : styles.state}
           onClick={() => handleCompareClick(id, compare)}
           variant='outline'
+
+      <div className='outlines'>
+        <Button
+          className={favourite ? styles.active : undefined}
+          variant='outline'
+          onClick={event => {
+            event.preventDefault();
+            toggleFavourite(id);
+          }}
+        >
+          <FontAwesomeIcon icon={favourite ? farHeart : faHeart}>
+            Favorite
+          </FontAwesomeIcon>
+        </Button>
+        <Button
+          className={compare ? styles.active : undefined}
+          variant='outline'
+          onClick={event => {
+            event.preventDefault();
+            if (countProductToCompare() < 4) {
+              addToCompare(id);
+            }
+          }}
+
         >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
@@ -87,9 +118,16 @@ ProductBox.propTypes = {
   handleFavoriteClick: PropTypes.func,
   favorite: PropTypes.bool,
   compare: PropTypes.bool,
+
   handlePopupClick: PropTypes.func,
   handleCompareClick: PropTypes.func,
   handleAddClick: PropTypes.func,
+
+  oldPrice: PropTypes.number,
+  addToCompare: PropTypes.func,
+  countProductToCompare: PropTypes.func,
+  toggleFavourite: PropTypes.func,
+
 };
 
 export default ProductBox;

@@ -1,0 +1,212 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $promoted-background-color;
+  border: 1px solid $promoted-border-color;
+
+  .oldPrice {
+    text-decoration: line-through;
+    color: $promoted-text-color;
+  }
+
+  .price {
+    background-color: $promoted-background-color2;
+    color: $promoted-text-color2;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 5px 10px;
+    display: inline-block;
+  }
+
+  .empty {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 10px 15px;
+    display: inline-block;
+  }
+
+  &:hover {
+    .photo .buttons {
+      display: flex;
+    }
+
+    .sale {
+      display: inline;
+    }
+  }
+
+  .photo {
+    position: relative;
+    padding: 80% 10px 0 10px;
+    background: {
+      color: $promoted-text-color3;
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+    overflow: hidden;
+    align-items: flex-end;
+
+    .dots {
+      position: absolute;
+      right: 0;
+      top: -22px;
+      z-index: 99999;
+
+      ul {
+        margin: 0;
+        padding: 0 0 0 1rem;
+        list-style: none;
+        transform: translateY(10px);
+
+        li {
+          display: inline-block;
+          margin-left: 0.5rem;
+
+          a {
+            display: block;
+            width: 13px;
+            height: 13px;
+            border-radius: 6px;
+            background-color: $promoted-background-color3;
+            font-size: 0;
+
+            &.active,
+            &:hover {
+              background-color: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .hotDeals {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      width: 100%;
+      text-align: left;
+      font-weight: 600;
+      transform: translateX(-50%);
+      background-color: $promoted-background-color4;
+      color: $promoted-text-color2;
+      padding: 30px 15px 5px 15px;
+      z-index: 99999;
+    }
+
+    .imageLeft {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .buttons {
+      display: none;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .contentLeft {
+    text-align: center;
+    padding: 20px;
+
+    h5 {
+      color: $primary;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+
+    .stars {
+      a {
+        text-decoration: none;
+        color: $promoted-text-color4;
+      }
+    }
+
+    .sale {
+      display: none;
+      position: absolute;
+      background-color: $promoted-background-color5;
+      border-radius: 50%;
+      color: $promoted-text-color2;
+      width: 65px;
+      height: 65px;
+      z-index: 99999;
+      bottom: 210px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px;
+
+      span {
+        font-size: 18px;
+        line-height: -10px;
+      }
+    }
+
+    .sale1 {
+      @extend .sale;
+      left: 20%;
+      transform: translateX(-50%);
+    }
+
+    .sale2 {
+      @extend .sale;
+      left: 40%;
+      transform: translateX(-50%);
+    }
+
+    .sale3 {
+      @extend .sale;
+      left: 60%;
+      transform: translateX(-50%);
+    }
+
+    .sale4 {
+      @extend .sale;
+      left: 80%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .line {
+    margin: 0 10px;
+    border-bottom: 1px solid $promoted-border-color2;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 30px;
+      border-bottom: 4px solid $primary;
+      transform: translateX(-50%);
+    }
+  }
+
+  .actions {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      transition: $transition-color, background-color $transition-bg-color, transform $transition-transform;
+
+      &:hover {
+        color: $promoted-text-color2 !important;
+        background-color: $primary;
+      }
+    }
+  }
+}

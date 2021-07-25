@@ -4,6 +4,7 @@ import {
   getAll,
   getCountProductToCompare,
   addToCompare,
+  toggleFavourite,
 } from '../../../redux/productsRedux';
 
 const mapStateToProps = state => ({
@@ -13,6 +14,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   addToCompare: id => dispatch(addToCompare(id)),
+  toggleFavourite: id => dispatch(toggleFavourite(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductBox);
