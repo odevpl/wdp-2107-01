@@ -11,13 +11,14 @@ class Brands extends React.Component {
     direction: 'init',
   };
 
-  setDirection(direction) {
-    this.setState({ direction: direction });
-  }
-
-  duplicateArray(brands, size) {
+  async setDirection(dir) {
     // /* eslint-disable */
     // debugger;
+    await this.setState({ direction: dir });
+  }
+
+  duplicateArray(brands, size, direction) {
+    this.setDirection(direction);
     let final = [];
     if (size > brands) {
       const first = brands;
@@ -37,8 +38,13 @@ class Brands extends React.Component {
   }
 
   displayBrands(brands, size) {
-    const direction = this.state.direction;
-    const readyArray = this.cutDoubleArray(brands, size, direction);
+    const dir = this.state.direction;
+    let readyArray = [];
+    if (dir === 'right') {
+      readyArray = this.cutDoubleArray(brands, size);
+    } else {
+      readyArray = brands.slice(0, this.calculateNumberOfPictures(size));
+    }
     return readyArray.map(brand => (
       <img
         id='brand'
@@ -50,7 +56,8 @@ class Brands extends React.Component {
     ));
   }
 
-  cutDoubleArray(doubleArray, size, direction = 'init') {
+  cutDoubleArray(doubleArray, size) {
+    const direction = this.state.direction;
     let readyArray = [];
     const numberOfPictures = this.calculateNumberOfPictures(size);
     const keyInArray = this.findKey(doubleArray);
@@ -118,8 +125,7 @@ class Brands extends React.Component {
               <div
                 className={styles.arrowLeft}
                 onClick={() => {
-                  updateBrands(this.duplicateArray(brands, size));
-                  this.setDirection('left');
+                  updateBrands(this.duplicateArray(brands, size, 'left'));
                 }}
               >
                 <div className={styles.arrowShadow}></div>
@@ -133,7 +139,7 @@ class Brands extends React.Component {
               </div>
               <div
                 className={styles.arrowRight}
-                onClick={() => updateBrands(this.duplicateArray(brands, size))}
+                onClick={() => updateBrands(this.duplicateArray(brands, size, 'right'))}
               >
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
