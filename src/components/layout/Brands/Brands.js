@@ -13,14 +13,8 @@ class Brands extends React.Component {
   };
 
   async setDirection(dir) {
-    // /* eslint-disable */
-    // debugger;
     await this.setState({ direction: dir });
   }
-
-  // displayBrands(brands, picNubmer) {
-
-  // }
 
   calculateNumberOfPictures(size) {
     let imgNumber;
