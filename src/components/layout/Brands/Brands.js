@@ -9,6 +9,7 @@ class Brands extends React.Component {
     imgNumber: 6,
     counter: 0,
     direction: 'init',
+    activePage: 0,
   };
 
   async setDirection(dir) {
@@ -17,58 +18,9 @@ class Brands extends React.Component {
     await this.setState({ direction: dir });
   }
 
-  duplicateArray(brands, size, direction) {
-    this.setDirection(direction);
-    let final = [];
-    if (size > brands) {
-      const first = brands;
-      const second = [];
-      for (let brand of brands) {
-        second.push({
-          brandLogoImage: brand.brandLogoImage,
-          id: brand.id + brands.length,
-        });
-      }
-      final = first.concat(second);
-    } else {
-      final = brands;
-    }
+  // displayBrands(brands, picNubmer) {
 
-    return final;
-  }
-
-  displayBrands(brands, size) {
-    const dir = this.state.direction;
-    let readyArray = [];
-    if (dir === 'right') {
-      readyArray = this.cutDoubleArray(brands, size);
-    } else {
-      readyArray = brands.slice(0, this.calculateNumberOfPictures(size));
-    }
-    return readyArray.map(brand => (
-      <img
-        id='brand'
-        key={brand.brandLogoImage}
-        src={brand.brandLogoImage}
-        alt={brand.id}
-        className={styles.brandLogoImage}
-      />
-    ));
-  }
-
-  cutDoubleArray(doubleArray, size) {
-    const direction = this.state.direction;
-    let readyArray = [];
-    const numberOfPictures = this.calculateNumberOfPictures(size);
-    const keyInArray = this.findKey(doubleArray);
-    if (direction === 'right' || direction === 'init') {
-      readyArray = doubleArray.slice(keyInArray, keyInArray + numberOfPictures);
-    } else {
-      readyArray = doubleArray.slice(keyInArray - numberOfPictures, keyInArray);
-    }
-
-    return readyArray;
-  }
+  // }
 
   calculateNumberOfPictures(size) {
     let imgNumber;
@@ -91,43 +43,33 @@ class Brands extends React.Component {
     return imgNumber;
   }
 
-  findKey(array) {
-    let currentKey;
-    const lastIndex = this.findLastIndex();
-    for (let key = 0; key < array.length; key++) {
-      if (array[key].id === parseInt(lastIndex)) {
-        currentKey = key;
-      }
-    }
-    return currentKey;
-  }
-
-  findLastIndex() {
-    const elements = document.querySelectorAll('#brand');
-    const lastChild = elements[elements.length - 1];
-    let lastIndex;
-
-    if (lastChild) {
-      lastIndex = lastChild.getAttribute('alt');
-    } else {
-      lastIndex = 0;
-    }
-    return lastIndex;
-  }
-
   render() {
-    const { brands, size, updateBrands } = this.props;
+    const { brands, size } = this.props;
+    const { activePage } = this.state;
+
+    const rightAction = () => {
+      const newPage = activePage + 1;
+      if (newPage < pagesCount) {
+        this.setState({ activePage: newPage });
+      }
+    };
+
+    const leftAction = () => {
+      const newPage = activePage - 1;
+      if (newPage > 0) {
+        this.setState({ activePage: newPage });
+      }
+    };
+    const picNubmer = this.calculateNumberOfPictures(size);
+
+    const pagesCount = Math.ceil(brands.length / picNubmer);
+
     return (
       <div className={styles.root}>
         <div className='container'>
           <div className='col'>
             <div className={styles.brandsRow}>
-              <div
-                className={styles.arrowLeft}
-                onClick={() => {
-                  updateBrands(this.duplicateArray(brands, size, 'left'));
-                }}
-              >
+              <div className={styles.arrowLeft} onClick={() => leftAction()}>
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
                   icon={faChevronLeft}
@@ -135,12 +77,22 @@ class Brands extends React.Component {
                 ></FontAwesomeIcon>
               </div>
               <div className={`slide ${styles.brandsImages}`}>
-                {this.displayBrands(brands, size)}
+                {brands
+                  .slice(
+                    this.state.activePage * picNubmer,
+                    (this.state.activePage + 1) * picNubmer
+                  )
+                  .map(brand => (
+                    <img
+                      id='brand'
+                      key={brand.brandLogoImage}
+                      src={brand.brandLogoImage}
+                      alt={brand.id}
+                      className={styles.brandLogoImage}
+                    />
+                  ))}
               </div>
-              <div
-                className={styles.arrowRight}
-                onClick={() => updateBrands(this.duplicateArray(brands, size, 'right'))}
-              >
+              <div className={styles.arrowRight} onClick={() => rightAction()}>
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
                   icon={faChevronRight}

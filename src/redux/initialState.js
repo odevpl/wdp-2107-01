@@ -80,6 +80,42 @@ const initialState = {
       brandLogoImage: '/images/brands-logo/logo-8/logo-8.jpg',
       id: 8,
     },
+    {
+      brandLogoImage: '/images/brands-logo/logo-9/logo-9.jpg',
+      id: 9,
+    },
+    {
+      brandLogoImage: '/images/brands-logo/logo-1/logo-1.jpg',
+      id: 10,
+    },
+    {
+      brandLogoImage: '/images/brands-logo/logo-2/logo-2.jpg',
+      id: 11,
+    },
+    {
+      brandLogoImage: '/images/brands-logo/logo-3/logo-3.jpg',
+      id: 12,
+    },
+    {
+      brandLogoImage: '/images/brands-logo/logo-4/logo-4.jpg',
+      id: 13,
+    },
+    {
+      brandLogoImage: '/images/brands-logo/logo-5/logo-5.jpg',
+      id: 14,
+    },
+    {
+      brandLogoImage: '/images/brands-logo/logo-6/logo-6.jpg',
+      id: 15,
+    },
+    {
+      brandLogoImage: '/images/brands-logo/logo-7/logo-7.jpg',
+      id: 16,
+    },
+    {
+      brandLogoImage: '/images/brands-logo/logo-8/logo-8.jpg',
+      id: 17,
+    },
   ],
   products: [
     {
