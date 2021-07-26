@@ -11,7 +11,9 @@ $gray-7:	#434343;
 $gray-8:	#363636;
 $gray-9:	#292929;
 $dark-gray: #2a2a2a;
+$darkOrange:	#d58e32;
 $orange: #d58e32;
+$green: #79AE30;
 $white: #ffffff;
 $white2: #e1e1e1;
 $white3: #f4f5f7;
@@ -33,6 +35,7 @@ $black3: rgba(0, 0, 0, 0.3);
 $black4: #333232b9;
 $red: #ff0000;
 $lightGreen: #7bb314;
+
 
 /* COMPONENT COLOURS - for use in other files */
 $form-border-color: $black;
@@ -67,8 +70,12 @@ $deals-topbox-background: $lightBlue-transparent;
 $deals-bottombox-background: $lightPink-transparent;
 $deals-shadowbox-color: $black-transaprent2;
 
+$furniture-border-color:	$gray2;
+
 $product-box-color: $transparent;
 $product-box-border: $white2;
+$productbox-stars-color:	$darkGray;
+$productbox-customStars-color: $darkOrange;
 $photo-color: $transparent;
 
 $gallery-box-border: $white2;
@@ -77,6 +84,11 @@ $gallery-box-shadow: $black-transaprent3;
 $gallery-rating-background: $white;
 $gallery-deal-color: $lightGreen;
 $gallery-text: $dark-gray;
+$gallery-border: $gray-4;
+$gallery-white: $white;
+$gallery-label: $darkGray;
+$gallery-shadow: $gray-5;
+$gallery-button: $green;
 
 $sale-color: $white;
 $sale-background: $gray3;
@@ -139,3 +151,5 @@ $promoted-text-color2: $white;
 $promoted-text-color3: $white3;
 $promoted-text-color4: $gray2;
 $promoted-text-color5: $gray-9;
+
+

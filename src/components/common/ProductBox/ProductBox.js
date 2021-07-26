@@ -23,6 +23,7 @@ const ProductBox = ({
   favourite,
   compare,
   countProductToCompare,
+
   addToCompare,
   toggleFavourite,
 }) => (
