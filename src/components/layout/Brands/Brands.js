@@ -56,7 +56,7 @@ class Brands extends React.Component {
 
     const leftAction = () => {
       const newPage = activePage - 1;
-      if (newPage > 0) {
+      if (newPage >= 0) {
         this.setState({ activePage: newPage });
       }
     };
