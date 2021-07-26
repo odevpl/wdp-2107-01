@@ -93,20 +93,18 @@ class NewFurniture extends React.Component {
                 <ul>{dots}</ul>
               </div>
             </div>
-
           </div>
           <Swipeable leftAction={leftAction} rightAction={rightAction}>
             <div className='row'>
-
-            <div className={`row ${this.state.fade}`}>
-
-              {categoryProducts
-                .slice(activePage * 8, (activePage + 1) * 8)
-                .map(item => (
-                  <div key={item.id} className='col-lg-3 col-md-4 col-sm-6 col-xs-12'>
-                    <ProductBox {...item} />
-                  </div>
-                ))}
+              <div className={`row ${this.state.fade}`}>
+                {categoryProducts
+                  .slice(activePage * 8, (activePage + 1) * 8)
+                  .map(item => (
+                    <div key={item.id} className='col-lg-3 col-md-4 col-sm-6 col-xs-12'>
+                      <ProductBox {...item} />
+                    </div>
+                  ))}
+              </div>
             </div>
           </Swipeable>
         </div>

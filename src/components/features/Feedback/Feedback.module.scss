@@ -1,4 +1,4 @@
-@import "../../../styles/settings.scss";
+@import "../../../styles/settings";
 
 .root {
   .panelBar {
@@ -6,7 +6,7 @@
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid $white2;
+      border-bottom: 4px solid $feedback-box-border;
     }
 
 
