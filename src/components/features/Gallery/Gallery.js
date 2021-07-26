@@ -74,7 +74,7 @@ class Gallery extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <img src={'/images/deals/bed_1.png'} alt={'bed'}></img>
+                    <img src={'/images/deals/bed_1.png'} alt={'bed'} />
                   </div>
                   <div className={styles.productGallery}>
                     <div className={styles.arrowLeft}>
