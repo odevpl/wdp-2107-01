@@ -21,10 +21,13 @@ import Stars from '../Stars/Stars';
 
 class Gallery extends React.Component {
   state = {
+    imgNumber: 6,
+    counter: 0,
     activeTab: 'topSeller',
     tabSwitchingStyle: 'fadeIn',
     productSwitchingStyle: 'fadeIn',
   };
+
   handleTabChange(newTab) {
     this.setState({ tabSwitchingStyle: styles.fadeOut });
     setTimeout(() => {
@@ -38,6 +41,27 @@ class Gallery extends React.Component {
       this.setState({ productSwitchingStyle: styles.fadeIn });
       this.props.setActive({ id, tab });
     }, 1000);
+  }
+
+  calculateNumberOfPictures(size) {
+    let imgNumber;
+    switch (size) {
+      case 'lg':
+        imgNumber = 6;
+        break;
+      case 'md':
+        imgNumber = 4;
+        break;
+      case 'sm':
+        imgNumber = 3;
+        break;
+      case 'xs':
+        imgNumber = 2;
+        break;
+      default:
+        imgNumber = 'error';
+    }
+    return imgNumber;
   }
 
   render() {
