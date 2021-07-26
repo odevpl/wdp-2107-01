@@ -5,6 +5,7 @@ import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as farHeart } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 
@@ -27,7 +28,6 @@ const ProductBox = ({
   countProductToCompare,
   addToCompare,
   toggleFavourite,
-
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -52,7 +52,6 @@ const ProductBox = ({
     </div>
     <div className={styles.line} />
     <div className={styles.actions}>
-
       <div className={styles.outlines}>
         <Button
           className={favorite ? styles.selected : styles.state}
@@ -65,17 +64,19 @@ const ProductBox = ({
           className={compare ? styles.selected : styles.state}
           onClick={() => handleCompareClick(id, compare)}
           variant='outline'
+        ></Button>
+      </div>
 
       <div className='outlines'>
         <Button
-          className={favourite ? styles.active : undefined}
+          className={favorite ? styles.active : undefined}
           variant='outline'
           onClick={event => {
             event.preventDefault();
             toggleFavourite(id);
           }}
         >
-          <FontAwesomeIcon icon={favourite ? farHeart : faHeart}>
+          <FontAwesomeIcon icon={favorite ? farHeart : faHeart}>
             Favorite
           </FontAwesomeIcon>
         </Button>
@@ -88,7 +89,6 @@ const ProductBox = ({
               addToCompare(id);
             }
           }}
-
         >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
@@ -127,7 +127,6 @@ ProductBox.propTypes = {
   addToCompare: PropTypes.func,
   countProductToCompare: PropTypes.func,
   toggleFavourite: PropTypes.func,
-
 };
 
 export default ProductBox;
