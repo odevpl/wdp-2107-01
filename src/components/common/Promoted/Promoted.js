@@ -12,18 +12,25 @@ class Promoted extends React.Component {
       productHotDealsLeft: 0,
       productHotDealsRight: 1,
       fade: 'fadein',
+      activePage: 0,
+      clicked: false,
     };
   }
 
   componentDidUpdate() {
     const maxPic = this.props.products.length - 1;
     let number = this.state.productHotDealsLeft;
+
     if (number === maxPic) {
       number = 1;
     }
-    setTimeout(() => {
-      this.setState({ productHotDealsLeft: number + 1 });
-    }, 3000);
+    if (!this.state.clicked) {
+      setTimeout(() => {
+        this.setState({ productHotDealsLeft: number + 1 });
+      }, 3000);
+    } else {
+      setTimeout(() => this.setState({ clicked: false }), 10000);
+    }
   }
 
   checkPicLength() {}
@@ -48,6 +55,21 @@ class Promoted extends React.Component {
     const { productHotDealsLeft } = this.state;
     const { productHotDealsRight } = this.state;
     const { fade } = this.state;
+    const { activePage } = this.state;
+    const dots = [];
+
+    for (let i = 0; i < 3; i++) {
+      dots.push(
+        <li>
+          <a
+            className={i === activePage && styles.active}
+            onClick={() => this.setState({ clicked: true })}
+          >
+            page {i}
+          </a>
+        </li>
+      );
+    }
 
     return (
       <div className={styles.root2}>
@@ -55,7 +77,7 @@ class Promoted extends React.Component {
           <div className='row'>
             {products.slice(productHotDealsLeft, productHotDealsLeft + 1).map(item => (
               <div key={item.id} className='col-4'>
-                <PromotedBox {...item} />
+                <PromotedBox {...item} dots={dots} />
               </div>
             ))}
             {products

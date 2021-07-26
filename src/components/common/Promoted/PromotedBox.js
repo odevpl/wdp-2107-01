@@ -20,6 +20,7 @@ class PromotedBox extends React.Component {
     stars: PropTypes.number,
     image: PropTypes.string,
     oldPrice: PropTypes.number,
+    dots: PropTypes.any,
   };
 
   state = {
@@ -36,16 +37,7 @@ class PromotedBox extends React.Component {
   render() {
     const { activePage } = this.state;
     const { fade } = this.state;
-    const dots = [];
-    this.setUpdate();
-
-    for (let i = 0; i < 3; i++) {
-      dots.push(
-        <li>
-          <a className={i === activePage && styles.active}>page {i}</a>
-        </li>
-      );
-    }
+    const { dots } = this.props;
 
     return (
       <div className={styles.root}>
