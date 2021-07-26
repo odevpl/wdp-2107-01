@@ -60,7 +60,8 @@ class Brands extends React.Component {
         this.setState({ activePage: newPage });
       }
     };
-    const picNubmer = this.calculateNumberOfPictures(size);
+    let picNubmer = this.calculateNumberOfPictures(size);
+    let numOfPics = document.querySelectorAll('#brand').length;
 
     const pagesCount = Math.ceil(brands.length / picNubmer);
 
@@ -77,6 +78,7 @@ class Brands extends React.Component {
                 ></FontAwesomeIcon>
               </div>
               <div className={`slide ${styles.brandsImages}`}>
+                {picNubmer !== numOfPics ? this.setState({ activePage: 0 }) : ''}
                 {brands
                   .slice(
                     this.state.activePage * picNubmer,
