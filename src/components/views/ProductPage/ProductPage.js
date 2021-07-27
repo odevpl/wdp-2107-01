@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './ProductPage.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import NewFurnitureSubpage from '../../features/NewFurniture/NewFurnitureSubpageContainer';
+
 import {
   faStar,
   faHeart,
@@ -146,6 +148,7 @@ const ProductPage = stars => {
             </div>
           </div>
         </div>
+        <NewFurnitureSubpage />
       </div>
     </div>
   );
