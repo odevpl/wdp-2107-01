@@ -62,7 +62,7 @@ Struktura plików jest ułożona zgodnie z obowiązującymi zasadami:
 ## Inicjacja projektu
 Po sklonowaniu projektu, zainstaluj wymagane paczki komendą `yarn install` (lub `npm install`).
 
-Te-raz możesz zacząć pracę, korzystając z przygotowanych taska `yarn start` (lub `npm start`).
+Teraz możesz zacząć pracę, korzystając z przygotowanych taska `yarn start` (lub `npm start`).
 
 Wszystkie potrzebne do pracy pliki źródłowe znajdują się w folderach `src` oraz `public`.
 
