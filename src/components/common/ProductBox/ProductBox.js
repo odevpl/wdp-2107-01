@@ -5,7 +5,6 @@ import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { faHeart as farHeart } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 
@@ -19,15 +18,10 @@ const ProductBox = ({
   id,
   favorite,
   compare,
-
   handlePopupClick,
   handleFavoriteClick,
   handleCompareClick,
   handleAddClick,
-
-  countProductToCompare,
-  addToCompare,
-  toggleFavourite,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -64,31 +58,6 @@ const ProductBox = ({
           className={compare ? styles.selected : styles.state}
           onClick={() => handleCompareClick(id, compare)}
           variant='outline'
-        ></Button>
-      </div>
-
-      <div className='outlines'>
-        <Button
-          className={favorite ? styles.active : undefined}
-          variant='outline'
-          onClick={event => {
-            event.preventDefault();
-            toggleFavourite(id);
-          }}
-        >
-          <FontAwesomeIcon icon={favorite ? farHeart : faHeart}>
-            Favorite
-          </FontAwesomeIcon>
-        </Button>
-        <Button
-          className={compare ? styles.active : undefined}
-          variant='outline'
-          onClick={event => {
-            event.preventDefault();
-            if (countProductToCompare() < 4) {
-              addToCompare(id);
-            }
-          }}
         >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
@@ -118,15 +87,9 @@ ProductBox.propTypes = {
   handleFavoriteClick: PropTypes.func,
   favorite: PropTypes.bool,
   compare: PropTypes.bool,
-
   handlePopupClick: PropTypes.func,
   handleCompareClick: PropTypes.func,
   handleAddClick: PropTypes.func,
-
-  oldPrice: PropTypes.number,
-  addToCompare: PropTypes.func,
-  countProductToCompare: PropTypes.func,
-  toggleFavourite: PropTypes.func,
 };
 
 export default ProductBox;
