@@ -18,11 +18,13 @@ class Promoted extends React.Component {
   }
 
   componentDidUpdate() {
-    const maxPic = this.props.products.length - 1;
+    this.bindDotsWithPic();
+
+    const maxPic = this.hotDealsLeft(this.props.products).length - 1;
     let number = this.state.productHotDealsLeft;
 
     if (number === maxPic) {
-      number = 1;
+      number = -1;
     }
     if (!this.state.clicked) {
       setTimeout(() => {
@@ -32,8 +34,6 @@ class Promoted extends React.Component {
       setTimeout(() => this.setState({ clicked: false }), 10000);
     }
   }
-
-  checkPicLength() {}
 
   changePic(e, value, direction) {
     e.preventDefault();
@@ -50,6 +50,29 @@ class Promoted extends React.Component {
     }
   }
 
+  bindDotsWithPic() {
+    const picId = this.state.productHotDealsLeft;
+    const dotsIds = document.querySelectorAll('ul>li.dot>a');
+    for (let dot of dotsIds) {
+      let dotId = dot.getAttribute('id');
+      if (dotId == picId) {
+        dot.classList.add('active');
+      }
+    }
+  }
+
+  hotDealsLeft(products) {
+    let hotDealsLeft = [];
+
+    for (let product of products) {
+      if (product.promo === true) {
+        hotDealsLeft.push(product);
+      }
+    }
+
+    return hotDealsLeft;
+  }
+
   render() {
     const { products } = this.props;
     const { productHotDealsLeft } = this.state;
@@ -60,10 +83,11 @@ class Promoted extends React.Component {
 
     for (let i = 0; i < 3; i++) {
       dots.push(
-        <li>
+        <li className={'dot'}>
           <a
             className={i === activePage && styles.active}
             onClick={() => this.setState({ clicked: true })}
+            id={i}
           >
             page {i}
           </a>
@@ -75,11 +99,13 @@ class Promoted extends React.Component {
       <div className={styles.root2}>
         <div className='container'>
           <div className='row'>
-            {products.slice(productHotDealsLeft, productHotDealsLeft + 1).map(item => (
-              <div key={item.id} className='col-4'>
-                <PromotedBox {...item} dots={dots} />
-              </div>
-            ))}
+            {this.hotDealsLeft(products)
+              .slice(productHotDealsLeft, productHotDealsLeft + 1)
+              .map((item, index) => (
+                <div key={item.id} className='col-4'>
+                  <PromotedBox {...item} dots={dots} id={index} />
+                </div>
+              ))}
             {products
               .slice(productHotDealsRight, productHotDealsRight + 1)
               .map(item => (

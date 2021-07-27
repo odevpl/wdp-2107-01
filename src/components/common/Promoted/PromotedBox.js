@@ -21,6 +21,7 @@ class PromotedBox extends React.Component {
     image: PropTypes.string,
     oldPrice: PropTypes.number,
     dots: PropTypes.any,
+    id: PropTypes.any,
   };
 
   state = {
@@ -38,6 +39,9 @@ class PromotedBox extends React.Component {
     const { activePage } = this.state;
     const { fade } = this.state;
     const { dots } = this.props;
+    const { id } = this.props;
+
+    console.log(id);
 
     return (
       <div className={styles.root}>
@@ -47,9 +51,10 @@ class PromotedBox extends React.Component {
             <ul>{dots}</ul>
           </div>
           <img
-            className={`${fade} ${styles.imageLeft}`}
+            className={`${fade} ${styles.imageLeft} image`}
             src={this.props.image}
             alt='Ups...'
+            id={id}
           ></img>
           <div className={styles.buttons}>
             <Button variant='small'>
