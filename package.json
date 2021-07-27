@@ -1,0 +1,81 @@
+{
+  "name": "Furniture-shop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "run-p start:* ",
+    "start:react": "react-scripts start",
+    "start-silent": "run-p start > /dev/null",
+    "start-and-test": "run-p start-silent test ",
+    "start-and-watch": "run-p start watch ",
+    "watch": "run-p watch:* ",
+    "watch:format": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
+    "refactor": "run-s refactor:*",
+    "refactor:format": "prettier --write \"src/**/*.{js,html,scss}\"",
+    "refactor:lint": "eslint src/",
+    "build": "react-scripts build",
+    "test": "react-scripts test --noStackTrace",
+    "test-all": "react-scripts test --watchAll=false --noStackTrace",
+    "test-related": "react-scripts test --watchAll=false --noStackTrace --findRelatedTests",
+    "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "npm run test-related --",
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
+    "bootstrap": "^4.6.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "node-sass": "^4.14.0",
+    "npm-run-all": "^4.1.5",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.6.1",
+    "react-bootstrap-star-rating": "^3.5.5-alpha.0.3",
+    "react-dom": "^16.14.0",
+    "react-flexbox-grid": "^2.1.2",
+    "react-fontawesome": "^1.7.1",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^4.0.3",
+    "react-svg": "^14.0.3",
+    "react-test-renderer": "^16.9.0",
+    "redux": "^4.0.4",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {
+    "husky": "^3.1.0",
+    "lint-staged": "^9.4.0",
+    "onchange": "^6.1.0",
+    "prettier": "^1.19.1",
+    "react-router-transition": "^2.1.0",
+    "redux-devtools-extension": "^2.13.8"
+  }
+}
