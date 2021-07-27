@@ -41,7 +41,7 @@
         bottom: -4px;
         left: 0;
         width: 100%;
-        border-bottom: 4px solid #e1e1e1;
+        border-bottom: 4px solid $feedback-box-border;
       }
     }
 
@@ -54,7 +54,7 @@
         margin: 0;
         padding: 0 0 0 1rem;
         list-style: none;
-        background-color: $white;
+        background-color: $feedback-box-bg;
         transform: translateY(15px);
 
         li {
@@ -67,7 +67,7 @@
             width: 13px;
             height: 13px;
             border-radius: 6px;
-            background-color: #e1e1e1;
+            background-color: $feedback-box-bg;
             font-size: 0;
 
             &.active,
