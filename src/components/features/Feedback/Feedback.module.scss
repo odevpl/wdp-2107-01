@@ -9,11 +9,23 @@
       border-bottom: 4px solid $feedback-box-border;
     }
 
+    margin: 60px 0 30px 0;
+    position: relative;
+
+    :global(.row) > * {
+      border-bottom: 4px solid $white4;
+    }
+    .headingEmpty {
+      border-bottom: 4px solid $white4;
+      width: 888px;
+    }
 
     .heading {
       position: relative;
 
       h3 {
+
+      .title {
         color: $primary;
         text-transform: uppercase;
         font-size: 20px;
@@ -45,6 +57,7 @@
       }
     }
 
+
     .dots {
       position: absolute;
       right: 0;
@@ -63,13 +76,26 @@
 
           //noinspection ALL
           div {
+
+        background-color: $white;
+        transform: translateY(15px);
+        width: 100px;
+
+        li {
+          display: inline-flex;
+          margin-left: 0.5rem;
+
+          a {
             display: block;
             width: 13px;
             height: 13px;
             border-radius: 6px;
             background-color: $feedback-box-bg;
             font-size: 0;
-
+            background-color: $white2;
+            font-size: 0;
+            margin-right: 8px;
+            margin-top: 20px;
             &.active,
             &:hover {
               background-color: $primary;
@@ -93,13 +119,24 @@
     margin-bottom: 24px;
   }
 
+  .clientsData {
+    margin: 0 0 80px 460px;
+    display: inline-flex;
+  }
+
+
   .client_image {
     width: 80px;
     height: 80px;
     border-radius: 5px;
+
     margin-left: 530px;
     margin-bottom: 3%;
     margin-top: 2%;
+  }
+
+
+
   }
 
 
@@ -118,6 +155,7 @@
   }
 
 
+
   .fadeout {
     opacity: 0;
     transition: 0.5s;
@@ -129,4 +167,7 @@
 }
 
 
+
+
+}
 

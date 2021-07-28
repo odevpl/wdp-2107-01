@@ -1,6 +1,14 @@
-@import "../../../styles/settings";
+@import "../../../styles/settings.scss";
 
 .root {
+  justify-content: center;
+  display: flex;
+  font-weight: 500;
+  color: $footer-copyright-color;
+  margin-bottom: 80px;
+  margin-top: 80px;
+
+
   .section {
     height: 605px;
 
@@ -19,6 +27,15 @@
           letter-spacing: 1px;
           border-bottom: 4px solid $gallery-box-border;
           margin-bottom: 40px;
+        color: $primary;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 38px;
+        margin: 0;
+        letter-spacing: 1px;
+        border-bottom: 4px solid $gallery-box-border;
+        margin-bottom: 40px;
+
       }
 
       &::before {
@@ -33,7 +50,7 @@
       .gallery {
         width: 100%;
         border: 1px solid $gallery-box-border;
-
+        
         .mainBar {
           display: flex;
           width: 100%;
@@ -54,10 +71,38 @@
 
             &:nth-of-type(4){
               border-right: 0;
+
+        .tabs ul {
+          list-style-type: none;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-left: 0;
+          margin-block-end: 0;
+
+          li {
+            flex: 1;
+            display: flex;
+            padding: 10px;
+            font-weight: 600;
+            border-right: solid 1px $gallery-border;
+            border-bottom: solid 1px $gallery-border;
+            justify-content: center;
+            align-items: stretch;
+
+            &:last-of-type {
+              border-right: none;
+            }
+
+            a {
+              color: $text-color;
+              text-decoration: none;
+
             }
           }
 
           .active {
+            
             color: $primary;
             background-color: $gallery-box-background;
             border-bottom: 0;
@@ -69,18 +114,45 @@
               top: -4px;
               left: 0;
               width: 100%;
-              border-bottom: 4px solid $primary;
+
+            border-bottom: none;
+            border-top: 4px solid $primary;
+            background-color: $gallery-box-background;
+
+            a {
+              color: $primary;
+
             }
           }
         }
 
         .mainProduct {
+
           display: flex;
           height: 400px;
           background-color: $gallery-box-background;
           overflow: hidden;
 
           .buttonsColumn {
+
+          position: relative;
+          display: flex;
+          height: 373px;
+          background-color: $gallery-box-background;
+          overflow: hidden;
+
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+          }
+
+          .actions {
+
             display: flex;
             flex-direction: column;
             padding-left: 10px;
@@ -96,7 +168,11 @@
                 color: $primary;
                 border-color: $primary;
 
+
                 &:nth-of-type(1)::before{
+
+                &:nth-of-type(1)::before {
+
                   color: $button-text;
                   content: "Add To Favourite";
                   padding-top: 3px;
@@ -110,7 +186,10 @@
                   z-index: 2;
                 }
 
+
                 &:nth-of-type(1)::after{
+
+
                   content: '';
                   position: absolute;
                   left: 145%;
@@ -122,7 +201,14 @@
                   z-index: 1;
                 }
 
+
+                  
                 &:nth-of-type(2)::before{
+
+                  
+                &:nth-of-type(2)::before {
+
+                  
                   color: $button-text;
                   content: "Add To Compare";
                   padding-top: 3px;
@@ -136,7 +222,14 @@
                   z-index: 2;
                 }
 
+
+                  
                 &:nth-of-type(2)::after{
+
+                  
+                &:nth-of-type(2)::after {
+
+                  
                   content: '';
                   position: absolute;
                   left: 145%;
@@ -148,7 +241,13 @@
                   z-index: 1;
                 }
 
+
+                  
                 &:nth-of-type(3)::before{
+
+                  
+                &:nth-of-type(3)::before {
+
                   color: $button-text;
                   content: "Add To Followed";
                   padding-top: 3px;
@@ -162,7 +261,12 @@
                   z-index: 2;
                 }
 
+
+                  
                 &:nth-of-type(3)::after{
+
+                &:nth-of-type(3)::after {
+
                   content: '';
                   position: absolute;
                   left: 145%;
@@ -174,7 +278,11 @@
                   z-index: 1;
                 }
 
+
                 &:nth-of-type(4)::before{
+
+                &:nth-of-type(4)::before {
+
                   color: $button-text;
                   content: "Add To Cart";
                   padding-top: 3px;
@@ -188,7 +296,11 @@
                   z-index: 2;
                 }
 
+                  
                 &:nth-of-type(4)::after{
+                  
+                &:nth-of-type(4)::after {
+                 
                   content: '';
                   position: absolute;
                   left: 145%;
@@ -277,6 +389,7 @@
             }
           }
 
+
           img {
             position: absolute;
             height: 50%;
@@ -285,19 +398,32 @@
             transform: translate(-50%, -50%);
             z-index: 0;
           }
+
         }
 
         .productGallery {
           display: flex;
+
           padding: 8px 2px 8px 2px;
 
           .smallProduct {
+
+          flex-direction: row;
+          justify-content: space-around;
+          padding: 15px 8px 8px 8px;
+          border-top: 1px solid $gallery-border;
+          margin-bottom: 10px;
+
+          .smallProduct {
+            position: relative;
+
             margin-left: 5px;
             margin-right: 5px;
             width: 70px;
             height: 70px;
             background-color: $box-shadow;
             position: relative;
+
 
             img {
               position: absolute;
@@ -306,6 +432,16 @@
               left: 50%;
               transform: translate(-50%, -50%);
               opacity: 0.7;
+
+
+            img {
+              position: absolute;
+              height: 100%;
+              max-width: 100%;
+              border: 1px solid $gallery-border;
+              opacity: 0.5;
+              margin-bottom: 1px;
+
             }
 
 
@@ -314,11 +450,13 @@
             }
           }
 
+
           .arrowShadow {
             width: 12px;
             height: 12px;
             border-radius: 10px;
             margin-left: 16px;
+
           }
 
           .arrowLeft,
@@ -329,6 +467,8 @@
             width: 35px;
             margin-left: 5px;
             margin-right: 5px;
+
+
           }
 
           .leftArrow,
@@ -361,7 +501,11 @@
         align-items: flex-start;
 
         .productPrice {
+
           color:$gallery-deal-color;
+
+          color: $gallery-deal-color;
+          
           font-weight: 600;
 
           span {
@@ -397,3 +541,34 @@
     }
   }
 }
+
+
+  /* Switching tabs */
+
+  .fadeIn {
+    opacity: 1;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+  }
+  .fadeOut {
+    opacity: 0;
+    transition: opacity 1s;
+
+}
+
+/* Media */
+
+@media (max-width: 991px) {
+
+  .rightSide {
+    display: none;
+  }
+
+  .tabs li {
+    text-align: center;
+  }
+}
+
