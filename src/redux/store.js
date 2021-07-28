@@ -8,6 +8,7 @@ import brandsReducer from './brandsRedux';
 import sizeReducer from './sizeRedux';
 import feedbackReducer from './feedbackRedux';
 import dealsReducer from './dealsRedux';
+import galleryRedux from './galleryRedux';
 
 // define reducers
 const reducers = {
@@ -18,6 +19,7 @@ const reducers = {
   size: sizeReducer,
   feedbacks: feedbackReducer,
   deals: dealsReducer,
+  gallery: galleryRedux,
 };
 
 // add blank reducers for initial state properties without reducers
@@ -26,14 +28,11 @@ Object.keys(initialState).forEach(item => {
     reducers[item] = (statePart = null) => statePart;
   }
 });
-
 const combinedReducers = combineReducers(reducers);
-
 // create store
 const store = createStore(
   combinedReducers,
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
-
 export default store;
