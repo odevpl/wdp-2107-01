@@ -27,6 +27,9 @@ $black-transaprent2: rgba(1, 2, 2, 0.3);
 $black-transaprent3: rgba(0, 0, 0, 0.4);
 $transparent: transparent;
 $darkGray:	#2a2a2a;
+
+$darkOrange:	#d58e32;
+
 $lightBlue-transparent: rgba(191, 198, 255, 0.25);
 $lightPink-transparent: rgba(252, 220, 255, 0.25);
 $black: #292929;
@@ -73,6 +76,8 @@ $deals-shadowbox-color: $black-transaprent2;
 $furniture-border-color:	$gray2;
 
 $product-box-color: $transparent;
+$productbox-stars-color:	$darkGray;
+$productbox-customStars-color: $darkOrange;
 $product-box-border: $white2;
 $productbox-stars-color:	$darkGray;
 $productbox-customStars-color: $darkOrange;
