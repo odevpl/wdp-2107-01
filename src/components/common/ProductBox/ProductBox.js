@@ -85,7 +85,6 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   customStars: PropTypes.number,
   image: PropTypes.node,
-
   id: PropTypes.string,
   handleFavoriteClick: PropTypes.func,
   favorite: PropTypes.bool,
@@ -93,6 +92,9 @@ ProductBox.propTypes = {
   handlePopupClick: PropTypes.func,
   handleCompareClick: PropTypes.func,
   handleAddClick: PropTypes.func,
+  countProductToCompare: PropTypes.any,
+  addToCompare: PropTypes.any,
+  toggleFavourite: PropTypes.any,
 };
 
 export default ProductBox;

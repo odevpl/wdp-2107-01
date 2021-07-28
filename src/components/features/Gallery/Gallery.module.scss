@@ -8,7 +8,6 @@
   margin-bottom: 80px;
   margin-top: 80px;
 
-
   .section {
     height: 605px;
 
@@ -19,14 +18,6 @@
       padding: 0;
 
       h3 {
-          color: $primary;
-          text-transform: uppercase;
-          font-size: 20px;
-          line-height: 38px;
-          margin: 0;
-          letter-spacing: 1px;
-          border-bottom: 4px solid $gallery-box-border;
-          margin-bottom: 40px;
         color: $primary;
         text-transform: uppercase;
         font-size: 20px;
@@ -35,7 +26,6 @@
         letter-spacing: 1px;
         border-bottom: 4px solid $gallery-box-border;
         margin-bottom: 40px;
-
       }
 
       &::before {
@@ -50,27 +40,6 @@
       .gallery {
         width: 100%;
         border: 1px solid $gallery-box-border;
-        
-        .mainBar {
-          display: flex;
-          width: 100%;
-          justify-content: space-evenly;
-          text-align: center;
-
-          a {
-            position: relative;
-            width: 25%;
-            font-size: 18px;
-            font-weight: 600;
-            color: $gallery-text;
-            text-decoration: none;
-            text-transform: uppercase;
-            border-right: 1px solid $gallery-box-border;
-            border-bottom: 1px solid $gallery-box-border;
-            padding: 6px 10px 6px 10px;
-
-            &:nth-of-type(4){
-              border-right: 0;
 
         .tabs ul {
           list-style-type: none;
@@ -97,44 +66,21 @@
             a {
               color: $text-color;
               text-decoration: none;
-
             }
           }
 
           .active {
-            
-            color: $primary;
-            background-color: $gallery-box-background;
-            border-bottom: 0;
-            position: relative;
-
-            &::before {
-              content: '';
-              position: absolute;
-              top: -4px;
-              left: 0;
-              width: 100%;
-
             border-bottom: none;
             border-top: 4px solid $primary;
             background-color: $gallery-box-background;
 
             a {
               color: $primary;
-
             }
           }
         }
 
         .mainProduct {
-
-          display: flex;
-          height: 400px;
-          background-color: $gallery-box-background;
-          overflow: hidden;
-
-          .buttonsColumn {
-
           position: relative;
           display: flex;
           height: 373px;
@@ -152,7 +98,6 @@
           }
 
           .actions {
-
             display: flex;
             flex-direction: column;
             padding-left: 10px;
@@ -168,11 +113,7 @@
                 color: $primary;
                 border-color: $primary;
 
-
-                &:nth-of-type(1)::before{
-
                 &:nth-of-type(1)::before {
-
                   color: $button-text;
                   content: "Add To Favourite";
                   padding-top: 3px;
@@ -186,10 +127,7 @@
                   z-index: 2;
                 }
 
-
-                &:nth-of-type(1)::after{
-
-
+                &:nth-of-type(1)::after {
                   content: '';
                   position: absolute;
                   left: 145%;
@@ -201,14 +139,7 @@
                   z-index: 1;
                 }
 
-
-                  
-                &:nth-of-type(2)::before{
-
-                  
                 &:nth-of-type(2)::before {
-
-                  
                   color: $button-text;
                   content: "Add To Compare";
                   padding-top: 3px;
@@ -222,14 +153,7 @@
                   z-index: 2;
                 }
 
-
-                  
-                &:nth-of-type(2)::after{
-
-                  
                 &:nth-of-type(2)::after {
-
-                  
                   content: '';
                   position: absolute;
                   left: 145%;
@@ -241,13 +165,7 @@
                   z-index: 1;
                 }
 
-
-                  
-                &:nth-of-type(3)::before{
-
-                  
                 &:nth-of-type(3)::before {
-
                   color: $button-text;
                   content: "Add To Followed";
                   padding-top: 3px;
@@ -261,12 +179,7 @@
                   z-index: 2;
                 }
 
-
-                  
-                &:nth-of-type(3)::after{
-
                 &:nth-of-type(3)::after {
-
                   content: '';
                   position: absolute;
                   left: 145%;
@@ -278,11 +191,7 @@
                   z-index: 1;
                 }
 
-
-                &:nth-of-type(4)::before{
-
                 &:nth-of-type(4)::before {
-
                   color: $button-text;
                   content: "Add To Cart";
                   padding-top: 3px;
@@ -296,11 +205,7 @@
                   z-index: 2;
                 }
 
-                  
-                &:nth-of-type(4)::after{
-                  
                 &:nth-of-type(4)::after {
-                 
                   content: '';
                   position: absolute;
                   left: 145%;
@@ -388,26 +293,10 @@
               }
             }
           }
-
-
-          img {
-            position: absolute;
-            height: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 0;
-          }
-
         }
 
         .productGallery {
           display: flex;
-
-          padding: 8px 2px 8px 2px;
-
-          .smallProduct {
-
           flex-direction: row;
           justify-content: space-around;
           padding: 15px 8px 8px 8px;
@@ -416,7 +305,6 @@
 
           .smallProduct {
             position: relative;
-
             margin-left: 5px;
             margin-right: 5px;
             width: 70px;
@@ -427,21 +315,11 @@
 
             img {
               position: absolute;
-              height: 50%;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              opacity: 0.7;
-
-
-            img {
-              position: absolute;
               height: 100%;
               max-width: 100%;
               border: 1px solid $gallery-border;
               opacity: 0.5;
               margin-bottom: 1px;
-
             }
 
 
@@ -467,8 +345,7 @@
             width: 35px;
             margin-left: 5px;
             margin-right: 5px;
-
-
+            margin-bottom: 1px;
           }
 
           .leftArrow,
@@ -501,11 +378,7 @@
         align-items: flex-start;
 
         .productPrice {
-
-          color:$gallery-deal-color;
-
           color: $gallery-deal-color;
-          
           font-weight: 600;
 
           span {
@@ -542,20 +415,19 @@
   }
 }
 
+/* Switching tabs */
 
-  /* Switching tabs */
-
-  .fadeIn {
-    opacity: 1;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -ms-transition: opacity 1s;
-    -o-transition: opacity 1s;
-  }
-  .fadeOut {
-    opacity: 0;
-    transition: opacity 1s;
+.fadeIn {
+  opacity: 1;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+}
+.fadeOut {
+  opacity: 0;
+  transition: opacity 1s;
 
 }
 
@@ -571,4 +443,3 @@
     text-align: center;
   }
 }
-

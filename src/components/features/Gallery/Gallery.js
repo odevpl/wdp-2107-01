@@ -8,16 +8,6 @@ import {
   faChevronLeft,
   faExchangeAlt,
   faShoppingBasket,
-
-  faStar,
-} from '@fortawesome/free-solid-svg-icons';
-import { faEye, faHeart, faStar as farStar } from '@fortawesome/free-regular-svg-icons';
-import Button from '../../common/Button/Button';
-
-class Gallery extends React.Component {
-  render() {
-    const { galleryProducts, selectedProduct, galleryDeal } = this.props;
-
   // faStar,
 } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -87,7 +77,6 @@ class Gallery extends React.Component {
       { id: 'topRated', name: 'TOP RATED' },
     ];
 
-
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -96,58 +85,6 @@ class Gallery extends React.Component {
               <div className={'col-12 ' + styles.leftBox}>
                 <h3>FURNITURE GALLLERY</h3>
                 <div className={styles.gallery}>
-                    
-                  <div className={styles.mainBar}>
-                    <Button>Featured</Button>
-                    <Button className={styles.active}>Top Seller</Button>
-                    <Button>Sale Off</Button>
-                    <Button>Top Rated</Button>
-                  </div>
-                  <div className={styles.mainProduct}>
-                    <div className={'col-6 ' + styles.buttonsColumn}>
-                      <Button variant='outline' className={styles.actionButton}>
-                        <FontAwesomeIcon icon={faHeart} />
-                      </Button>
-                      <Button variant='outline' className={styles.actionButton}>
-                        <FontAwesomeIcon icon={faExchangeAlt} />
-                      </Button>
-                      <Button variant='outline' className={styles.actionButton}>
-                        <FontAwesomeIcon icon={faEye} />
-                      </Button>
-                      <Button variant='outline' className={styles.actionButton}>
-                        <FontAwesomeIcon icon={faShoppingBasket} />
-                      </Button>
-                    </div>
-                    <div className={'col-6 ' + styles.infoColumn}>
-                      <div className={styles.priceCloud}>
-                        <span className={styles.newPrice}>
-                          ${selectedProduct.price}
-                        </span>
-                        <span className={styles.oldPrice}>
-                          {selectedProduct.oldPrice}
-                        </span>
-                      </div>
-                      <div className={styles.ratingBar}>
-                        <p>{selectedProduct.name}</p>
-                        <div className={styles.stars}>
-                          {[1, 2, 3, 4, 5].map(i => (
-                            <a key={i} href='#'>
-                              {i <= selectedProduct.stars ? (
-                                <FontAwesomeIcon icon={faStar}>
-                                  {i} stars
-                                </FontAwesomeIcon>
-                              ) : (
-                                <FontAwesomeIcon icon={farStar}>
-                                  {i} stars
-                                </FontAwesomeIcon>
-                              )}
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    <img src={'/images/deals/bed_1.png'} alt={'bed'}></img>
-                    
                   <div className={styles.tabs}>
                     <ul>
                       {tabs.map(tab => (
@@ -203,7 +140,6 @@ class Gallery extends React.Component {
                         </div>
                       </div>
                     </div>
-                    
                   </div>
                   <div className={styles.productGallery}>
                     <div className={styles.arrowLeft}>
@@ -215,11 +151,7 @@ class Gallery extends React.Component {
                     </div>
                     {galleryProducts.map(product => (
                       <Button key={product.id} className={styles.smallProduct}>
-                      <img
-                          key={product.id}
-                          className={product.selected ? styles.selected : undefined}
-                          src={'/images/deals/bed_1.png'}
-                          alt={'bed'}
+                        <img
                           src={product.image}
                           className={
                             product.id === activeProduct.id ? styles.active : styles.img
