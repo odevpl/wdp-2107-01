@@ -51,7 +51,7 @@ class Stars extends React.Component {
     stars = customStars ? customStars : stars;
     stars = this.state.hover ? this.state.hoveredStar : stars;
     return (
-      <div>
+      <div className={styles.root}>
         <div
           className={
             customStars || this.state.hover
