@@ -8,10 +8,16 @@ class Brands extends React.Component {
   state = {
     imgNumber: 6,
     counter: 0,
+    direction: 'init',
+    activePage: 0,
   };
 
-  calculateParamsForSlice(size) {
-    let imgNumber = 1;
+  async setDirection(dir) {
+    await this.setState({ direction: dir });
+  }
+
+  calculateNumberOfPictures(size) {
+    let imgNumber;
     switch (size) {
       case 'lg':
         imgNumber = 6;
@@ -26,37 +32,39 @@ class Brands extends React.Component {
         imgNumber = 2;
         break;
       default:
-        imgNumber = 1;
+        imgNumber = 'error';
     }
-
     return imgNumber;
-  }
-
-  sliceArray(brands, size) {
-    const array = brands.slice(this.state.counter, this.calculateParamsForSlice(size));
-    return array;
-  }
-
-  displayBrands(brands, size) {
-    const array = this.sliceArray(brands, size);
-    return array.map(brand => (
-      <img
-        key={brand.brandLogoImage}
-        src={brand.brandLogoImage}
-        alt={'brand'}
-        className={styles.brandLogoImage}
-      />
-    ));
   }
 
   render() {
     const { brands, size } = this.props;
+    const { activePage } = this.state;
+
+    const rightAction = () => {
+      const newPage = activePage + 1;
+      if (newPage < pagesCount) {
+        this.setState({ activePage: newPage });
+      }
+    };
+
+    const leftAction = () => {
+      const newPage = activePage - 1;
+      if (newPage >= 0) {
+        this.setState({ activePage: newPage });
+      }
+    };
+    let picNubmer = this.calculateNumberOfPictures(size);
+    let numOfPics = document.querySelectorAll('#brand').length;
+
+    const pagesCount = Math.ceil(brands.length / picNubmer);
+
     return (
       <div className={styles.root}>
         <div className='container'>
           <div className='col'>
             <div className={styles.brandsRow}>
-              <div className={styles.arrowLeft}>
+              <div className={styles.arrowLeft} onClick={() => leftAction()}>
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
                   icon={faChevronLeft}
@@ -64,9 +72,23 @@ class Brands extends React.Component {
                 ></FontAwesomeIcon>
               </div>
               <div className={`slide ${styles.brandsImages}`}>
-                {this.displayBrands(brands, size)}
+                {picNubmer !== numOfPics ? this.setState({ activePage: 0 }) : ''}
+                {brands
+                  .slice(
+                    this.state.activePage * picNubmer,
+                    (this.state.activePage + 1) * picNubmer
+                  )
+                  .map(brand => (
+                    <img
+                      id='brand'
+                      key={brand.brandLogoImage}
+                      src={brand.brandLogoImage}
+                      alt={brand.id}
+                      className={styles.brandLogoImage}
+                    />
+                  ))}
               </div>
-              <div className={styles.arrowRight}>
+              <div className={styles.arrowRight} onClick={() => rightAction()}>
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
                   icon={faChevronRight}
@@ -83,6 +105,7 @@ class Brands extends React.Component {
 
 Brands.propTypes = {
   size: PropTypes.any,
+  updateBrands: PropTypes.func,
   brands: PropTypes.arrayOf(
     PropTypes.shape({
       brandLogoImage: PropTypes.string,
