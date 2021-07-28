@@ -20,22 +20,28 @@ class PromotedBox extends React.Component {
     stars: PropTypes.number,
     image: PropTypes.string,
     oldPrice: PropTypes.number,
+    dots: PropTypes.any,
+    id: PropTypes.any,
   };
 
   state = {
     activePage: 0,
+    fade: 'fadein',
   };
+
+  setUpdate() {
+    setTimeout(() => {
+      this.setState({ fade: 'fadeout' });
+    }, 2500);
+  }
 
   render() {
     const { activePage } = this.state;
-    const dots = [];
-    for (let i = 0; i < 3; i++) {
-      dots.push(
-        <li>
-          <a className={i === activePage && styles.active}>page {i}</a>
-        </li>
-      );
-    }
+    const { fade } = this.state;
+    const { dots } = this.props;
+    const { id } = this.props;
+
+    console.log(id);
 
     return (
       <div className={styles.root}>
@@ -44,7 +50,12 @@ class PromotedBox extends React.Component {
           <div className={'col-auto ' + styles.dots}>
             <ul>{dots}</ul>
           </div>
-          <img className={styles.imageLeft} src={this.props.image} alt='Ups...'></img>
+          <img
+            className={`${fade} ${styles.imageLeft} image`}
+            src={this.props.image}
+            alt='Ups...'
+            id={id}
+          ></img>
           <div className={styles.buttons}>
             <Button variant='small'>
               <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
