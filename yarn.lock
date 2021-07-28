@@ -10383,6 +10383,7 @@ react-dom@^16.14.0:
 
 react-elastic-carousel@^0.11.5:
   version "0.11.5"
+  resolved "https://registry.yarnpkg.com/react-elastic-carousel/-/react-elastic-carousel-0.11.5.tgz#4be027ea047c4f7678273caa844e83d91f3784dc"
   resolved "https://registry.npmjs.org/react-elastic-carousel/-/react-elastic-carousel-0.11.5.tgz"
   integrity sha512-//k1IWUiUNXXNE8LHw4bLdP+8YCXLQHbeSOPiZo/+sTkUBp/YB/hjGKWH4RqSJ59AjF8PoxB+SUbqhdPTcwAuw==
   dependencies:
@@ -10437,6 +10438,7 @@ react-motion@^0.5.2:
 
 react-only-when@^1.0.2:
   version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-only-when/-/react-only-when-1.0.2.tgz#a8a79b48dd6cfbd91ddc710674a94153e88039d3"
   resolved "https://registry.npmjs.org/react-only-when/-/react-only-when-1.0.2.tgz"
   integrity sha512-agE6l3L6bqaVuwNtjihTQ36M+VBfPS63KOzcNL4ZTmlwSxQPvhzIqmBWfiol0/wLYmKxCcBqgXkEJpvj5Kob8Q==
 
@@ -10586,6 +10588,7 @@ react-svg@^14.0.3:
 
 react-swipeable@^5.5.1:
   version "5.5.1"
+  resolved "https://registry.yarnpkg.com/react-swipeable/-/react-swipeable-5.5.1.tgz#48ae6182deaf62f21d4b87469b60281dbd7c4a76"
   resolved "https://registry.npmjs.org/react-swipeable/-/react-swipeable-5.5.1.tgz"
   integrity sha512-EQObuU3Qg3JdX3WxOn5reZvOSCpU4fwpUAs+NlXSN3y+qtsO2r8VGkVnOQzmByt3BSYj9EWYdUOUfi7vaMdZZw==
   dependencies:
@@ -10926,6 +10929,7 @@ requires-port@^1.0.0:
 
 resize-observer-polyfill@1.5.0:
   version "1.5.0"
+  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.0.tgz#660ff1d9712a2382baa2cad450a4716209f9ca69"
   resolved "https://registry.npmjs.org/resize-observer-polyfill/-/resize-observer-polyfill-1.5.0.tgz"
   integrity sha512-M2AelyJDVR/oLnToJLtuDJRBBWUGUvvGigj1411hXhAdyFWqMaqHp7TixW3FpiLuVaikIcR1QL+zqoJoZlOgpg==
 

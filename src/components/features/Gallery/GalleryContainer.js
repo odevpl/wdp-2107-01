@@ -4,6 +4,7 @@ import {
   getGalleryProducts,
   getSelectedProduct,
 } from '../../../redux/productsRedux.js';
+
 import { getActives, setActive } from '../../../redux/galleryRedux';
 
 import { getGalleryDeal } from '../../../redux/dealsRedux';

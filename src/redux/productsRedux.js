@@ -28,14 +28,12 @@ const createActionName = name => `app/${reducerName}/${name}`;
 const SET_CUSTOM_STARS = createActionName('SET_CUSTOM_STARS');
 export const ADD_TO_COMPARE = createActionName('ADD_TO_COMPARE');
 export const REMOVE_FROM_COMPARE = createActionName('REMOVE_FROM_COMPARE');
-
 export const TOGGLE_FAVOURITE = createActionName('TOGGLE_FAVOURITE');
 
 /* action creator */
 export const setCustomStars = payload => ({ payload, type: SET_CUSTOM_STARS });
 export const addToCompare = payload => ({ payload, type: ADD_TO_COMPARE });
 export const removeFromCompare = payload => ({ payload, type: REMOVE_FROM_COMPARE });
-
 export const toggleFavourite = payload => ({ payload, type: TOGGLE_FAVOURITE });
 
 /* reducer */

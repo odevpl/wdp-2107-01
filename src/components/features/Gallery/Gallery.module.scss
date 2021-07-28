@@ -415,19 +415,19 @@
   }
 }
 
-  /* Switching tabs */
+/* Switching tabs */
 
-  .fadeIn {
-    opacity: 1;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -ms-transition: opacity 1s;
-    -o-transition: opacity 1s;
-  }
-  .fadeOut {
-    opacity: 0;
-    transition: opacity 1s;
+.fadeIn {
+  opacity: 1;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+}
+.fadeOut {
+  opacity: 0;
+  transition: opacity 1s;
 
 }
 

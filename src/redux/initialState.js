@@ -9,11 +9,33 @@ const initialState = {
   ],
   feedbacks: [
     {
-      title: 'Client feedback',
+      id: 'CLIENT-1',
+      title: 'CLIENT FEEDBACK',
       opinion:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elit eros, sodales vitae turpis id, gravida placerat turpis. Donec non pulvinar leo. Aliquam erat volutpat. Ut ultricies auctor sem ac dapibus.',
       client_image: '/images/feedback/john-smith.jpg',
       client_name: 'John Smith',
+      client_type: 'Furniture client',
+    },
+
+    {
+      id: 'CLIENT-2',
+      title: 'CLIENT FEEDBACK',
+      opinion:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elit eros, sodales vitae turpis id, gravida placerat turpis. Donec non pulvinar leo. Aliquam erat volutpat. Ut ultricies auctor sem ac dapibus.',
+      client_image:
+        'https://images.pexels.com/photos/25758/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      client_name: 'Albert Einstain',
+      client_type: 'Furniture client',
+    },
+    {
+      id: 'CLIENT-3',
+      title: 'CLIENT FEEDBACK',
+      opinion:
+        'Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa',
+      client_image:
+        'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      client_name: 'Bruce Lee',
       client_type: 'Furniture client',
     },
   ],
