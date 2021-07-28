@@ -3,18 +3,31 @@
 .root {
   box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
   background-color: #ffffff;
-  bottom: 0;
-  max-height: 200px;
+  bottom: 0px;
+  margin-bottom: 0;
+  max-height: 300px;
   position: sticky;
   z-index: 99;
 
-  :global(.container) > * {
-    border: 1px solid #e1e1e1;
-    height: 200px;
+
+  .text {
+    color: $primary;
+  }
+
+  .tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &>* {
+      font-weight: bold;
+    }
   }
 
   .rowWrapper {
     padding-top: 10px;
+    height: 100%;
   }
   .colWrapper:hover {
     opacity: 0.9;
@@ -41,8 +54,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    // height: 100%;
     object-fit: cover;
   }
 
