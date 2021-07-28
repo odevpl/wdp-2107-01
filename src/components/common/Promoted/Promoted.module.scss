@@ -2,4 +2,35 @@
 
 .root2 {
   padding: 5rem 0;
+
+  .actions {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .buttonSliderLeft {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      &:hover {
+        background-color: $primary;
+        text-decoration: none;
+        color: $promoted-text-color2;
+      }
+    }
+
+    .buttonSliderRight {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      &:hover {
+        background-color: $primary;
+        text-decoration: none;
+        color: $promoted-text-color2;
+      }
+    }
+  }
 }
